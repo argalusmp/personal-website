@@ -11,7 +11,7 @@ const projectsData = [
     description:
       "Build Recommendation system model with content-based filtering for user's based preferences",
     image: "/images/projects/11.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Machine Learning"],
     gitUrl:
       "https://github.com/argalusmp/songs_recommendation_system?tab=readme-ov-file",
     previewUrl: "/",
@@ -22,7 +22,7 @@ const projectsData = [
     description:
       "Build Recommendation system model to create recommendations for users based on each user's preferences with Tensorflow",
     image: "/images/projects/22.jpg",
-    tag: ["All", "Web"],
+    tag: ["All", "Machine Learning"],
     gitUrl: "https://github.com/Capstone-CH2-PS374/ML_Recommendation_system",
     previewUrl:
       "https://github.com/Capstone-CH2-PS374/ML_Recommendation_system",
@@ -60,7 +60,7 @@ const projectsData = [
     title: "Laptop Price Prediction",
     description: "This project focuses on predicting laptop prices using datasets available on Kaggle. Laptop price predictions are important to help consumers make purchasing decisions.",
     image: "/images/projects/66.jpg",
-    tag: ["All", "Web"],
+    tag: ["All", "Machine Learning"],
     gitUrl: "https://github.com/argalusmp/laptop_price_prediction_ML",
     previewUrl: "/",
   },
@@ -104,6 +104,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Machine Learning"
+          isSelected={tag === "Machine Learning"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
