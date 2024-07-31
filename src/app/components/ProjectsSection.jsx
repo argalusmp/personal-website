@@ -64,6 +64,15 @@ const projectsData = [
     gitUrl: "https://github.com/argalusmp/laptop_price_prediction_ML",
     previewUrl: "/",
   },
+  {
+    id: 7,
+    title: "Indonesian Sign Languages",
+    description: "This application is expected to be able to recognize and understand sign language with high accuracy, so that it can help bridge communication between deaf and non-disabled communities",
+    image: "/images/projects/sign_languages.jpg",
+    tag: ["All", "Machine Learning"],
+    gitUrl: "https://github.com/argalusmp/gestura",
+    previewUrl: "/",
+  },
 ];
 
 const ProjectsSection = () => {
