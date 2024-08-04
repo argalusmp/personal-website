@@ -70,7 +70,16 @@ const projectsData = [
     description: "This application is expected to be able to recognize and understand sign language with high accuracy, so that it can help bridge communication between deaf and non-disabled communities",
     image: "/images/projects/sign_languages.jpg",
     tag: ["All", "Machine Learning"],
-    gitUrl: "https://github.com/argalusmp/gestura",
+    gitUrl: "https://github.com/argalusmp/gestura_app",
+    previewUrl: "/",
+  },
+  {
+    id: 8,
+    title: "IoT Waste Checking",
+    description: "This application is expected to be able to checking and organized waste or trash information, so can help us to how organized trash better",
+    image: "/images/projects/trashcker.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/argalusmp/trashcker_IoT",
     previewUrl: "/",
   },
 ];
