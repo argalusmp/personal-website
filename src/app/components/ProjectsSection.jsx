@@ -77,7 +77,7 @@ const projectsData = [
     id: 8,
     title: "IoT Waste Checking",
     description: "This application is expected to be able to checking and organized waste or trash information, so can help us to how organized trash better",
-    image: "/images/projects/trashcker.jpg",
+    image: "/images/projects/trashcker.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/argalusmp/trashcker_IoT",
     previewUrl: "/",
