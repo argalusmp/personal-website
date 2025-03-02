@@ -14,7 +14,7 @@ const TAB_DATA = [
         <li>SQL</li>
         <li>JavaScript</li>
         <li>React</li>
-        <li>Flutter</li>
+        <li>Laravel</li>
       </ul>
     ),
   },
@@ -33,6 +33,8 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li> Bangkit Academy by Google, Goto & Traveloka (Cohort in 2021) </li>
+        <li> Data Scientist Intern ( Braincore ) | Jul 2024 - Oct 2024</li>
+        <li> Developer Intern ( Berlian Sistem Informasi ) | Nov 2024 - Feb 2024</li>
       </ul>
     ),
   },
