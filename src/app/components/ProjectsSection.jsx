@@ -158,7 +158,7 @@ const ProjectsSection = () => {
         <div
           style={{
             position: "relative",
-            width: "100%",
+            width: "80%",
             height: "0",
             paddingTop: "56.25%",
             paddingBottom: "0",
