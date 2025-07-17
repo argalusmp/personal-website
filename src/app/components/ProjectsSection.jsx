@@ -86,6 +86,16 @@ const projectsData = [
     gitUrl: "https://github.com/argalusmp/trashcker_IoT",
     previewUrl: "/",
   },
+  {
+    id: 9,
+    title: "Chatbot",
+    description:
+      "This website is expected to be able to help student in college to find information about thesis in that college",
+    image: "/images/projects/77.png",
+    tag: ["All", "Web", "Machine Learning"],
+    gitUrl: "https://github.com/argalusmp/skripsia",
+    previewUrl: "/",
+  },
 ];
 
 const ProjectsSection = () => {
