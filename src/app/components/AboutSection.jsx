@@ -67,7 +67,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            A passionate Informatics Engineering student with knowledge of information technology and skills for development. Have practical experience in implementing theoretical concepts in lecture projects and personal projects. Learn programming languages such as Python with Tensorflow to build machine learning or manage data with programming, also I learn PHP and JavaScript, along with their frameworks and libraries such as jQuery, Laravel and react and have knowledge of databases in web development. Able to work independently or in a team and ready to learn new things in a dynamic work environment. Have a high interest in the latest technologies such as machine learning and web/mobile application development. Ready to contribute and learn from an internship experience in the IT field.
+           Entry-Level IT Developer | Data Science with hands-on experience in software development, in DS & LLM-based chatbot. Cut manual reporting time 70% via automation, and built RAG/LLM prototypes with Python & vector stores. Strong in Javascript, python, Pandas, scikit-learn, TensorFlow, SQL, and experiment tracking/evaluation. GPA 3.73. Eager to deliver measurable business impact fast. 
           </p>
           <div className="flex flex-row justify-start mt-5">
             <TabButton

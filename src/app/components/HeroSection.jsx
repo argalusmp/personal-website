@@ -24,7 +24,7 @@ const HeroSection = () => {
               sequence={[
                 "Vidi Marpaung",
                 1000,
-                "Machine Learning Engineer",
+                "Data Scientist",
                 1000,
                 "Web Developer",
                 1000,
@@ -35,8 +35,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            I am a dedicated and enthusiastic student pursuing a degree in
-            Informatics Engineering. With a strong passion for developing a
+            I am a Fresh-Graduate of Informatics Engineering from Politeknik Negeri Jakarta With a strong passion for developing a
             project and an unwavering curiosity for emerging technologies, I am
             constantly seeking opportunities to expand my knowledge and
             contribute to the tech industry..
@@ -63,13 +62,13 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#103666] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/profil.png"
+              src="/images/profil.jpg"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={150}
-              height={150}
+              width={300}
+              height={300}
             />
           </div>
         </motion.div>
