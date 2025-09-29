@@ -3,98 +3,115 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const projectsData = [
   {
     id: 1,
-    title: "Songs Recommendation",
+    title: "Songs Recommendation System",
     description:
-      "Build Recommendation system model with content-based filtering for user's based preferences",
+      "Built a sophisticated recommendation system using content-based filtering to provide personalized song suggestions based on user preferences and listening history.",
     image: "/images/projects/11.png",
     tag: ["All", "Machine Learning"],
-    gitUrl:
-      "https://github.com/argalusmp/songs_recommendation_system?tab=readme-ov-file",
+    gitUrl: "https://github.com/argalusmp/songs_recommendation_system?tab=readme-ov-file",
     previewUrl: "/",
+    technologies: ["Python", "Pandas", "Scikit-learn", "Machine Learning"],
+    status: "Completed"
   },
   {
     id: 2,
-    title: "Recommendation System Volunters",
+    title: "Volunteer Recommendation System",
     description:
-      "Build Recommendation system model to create recommendations for users based on each user's preferences with Tensorflow",
+      "Developed an advanced recommendation system using TensorFlow to match volunteers with suitable opportunities based on their skills, preferences, and availability.",
     image: "/images/projects/22.jpg",
     tag: ["All", "Machine Learning"],
     gitUrl: "https://github.com/Capstone-CH2-PS374/ML_Recommendation_system",
-    previewUrl:
-      "https://github.com/Capstone-CH2-PS374/ML_Recommendation_system",
+    previewUrl: "https://github.com/Capstone-CH2-PS374/ML_Recommendation_system",
+    technologies: ["TensorFlow", "Python", "Machine Learning", "Recommendation Systems"],
+    status: "Completed"
   },
   {
     id: 3,
-    title: "Group chat app",
+    title: "Real-time Group Chat App",
     description:
-      "Create an application that can carry out simple conversations for all users in one chat bubble with flutter",
+      "Created a cross-platform mobile application enabling real-time group conversations with modern UI/UX design and seamless user experience.",
     image: "/images/projects/33.jpg",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/argalusmp/chat_app_flutter",
     previewUrl: "/",
+    technologies: ["Flutter", "Dart", "Firebase", "Real-time Communication"],
+    status: "Completed"
   },
   {
     id: 4,
-    title: "Restaurant React",
-    description: "Making profile UI restraurant web with Reactjs",
+    title: "Restaurant Management Web App",
+    description: "Designed and developed a comprehensive restaurant profile and management system with modern React.js frontend and responsive design.",
     image: "/images/projects/44.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/argalusmp/restaurant-react",
     previewUrl: "/",
+    technologies: ["React", "JavaScript", "CSS3", "Responsive Design"],
+    status: "Completed"
   },
   {
     id: 5,
-    title: "Laravel Todo List",
+    title: "Laravel Todo Management System",
     description:
-      "Todo List app web based that build in php framework which is Laravel",
+      "Built a full-featured task management application using Laravel framework with user authentication, CRUD operations, and modern web interface.",
     image: "/images/projects/55.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/argalusmp/Todolist-Basic-Laravel",
     previewUrl: "/",
+    technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
+    status: "Completed"
   },
   {
     id: 6,
-    title: "Laptop Price Prediction",
+    title: "Laptop Price Prediction Model",
     description:
-      "This project focuses on predicting laptop prices using datasets available on Kaggle. Laptop price predictions are important to help consumers make purchasing decisions.",
+      "Developed a machine learning model to predict laptop prices using Kaggle datasets, helping consumers make informed purchasing decisions.",
     image: "/images/projects/66.jpg",
     tag: ["All", "Machine Learning"],
     gitUrl: "https://github.com/argalusmp/laptop_price_prediction_ML",
     previewUrl: "/",
+    technologies: ["Python", "Pandas", "Scikit-learn", "Data Analysis"],
+    status: "Completed"
   },
   {
     id: 7,
-    title: "Indonesian Sign Languages",
+    title: "Indonesian Sign Language Recognition",
     description:
-      "This application is expected to be able to recognize and understand sign language with high accuracy, so that it can help bridge communication between deaf and non-disabled communities",
+      "Created an AI-powered application that recognizes and interprets Indonesian sign language with high accuracy, bridging communication gaps for the deaf community.",
     image: "/images/projects/sign_languages.jpg",
     tag: ["All", "Machine Learning"],
     gitUrl: "https://github.com/argalusmp/gestura_app",
     previewUrl: "/",
+    technologies: ["Computer Vision", "TensorFlow", "Python", "OpenCV"],
+    status: "Completed"
   },
   {
     id: 8,
-    title: "IoT Waste Checking",
+    title: "IoT Waste Management System",
     description:
-      "This application is expected to be able to checking and organized waste or trash information, so can help us to how organized trash better",
+      "Designed an IoT-based waste monitoring and management system to help organize and track waste information efficiently.",
     image: "/images/projects/trashcker.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/argalusmp/trashcker_IoT",
     previewUrl: "/",
+    technologies: ["IoT", "Web Development", "Arduino", "PHP"],
+    status: "Completed"
   },
   {
     id: 9,
-    title: "Chatbot",
+    title: "AI-Powered Thesis Assistant Chatbot",
     description:
-      "This website is expected to be able to help student in college to find information about thesis in that college",
+      "Developed an intelligent chatbot to help university students find thesis-related information and resources using natural language processing.",
     image: "/images/projects/77.png",
     tag: ["All", "Web", "Machine Learning"],
     gitUrl: "https://github.com/argalusmp/skripsia",
     previewUrl: "/",
+    technologies: ["NLP", "Chatbot", "Web Development", "Machine Learning"],
+    status: "Completed"
   },
 ];
 
@@ -117,96 +134,98 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Machine Learning"
-          isSelected={tag === "Machine Learning"}
-        />
-      </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 mb-11">
+    <section ref={ref} id="projects" className="text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6 }}
+        className="mb-16"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="text-gradient">Featured</span>{" "}
+          <span className="text-text-primary">Projects</span>
+        </h2>
+        <p className="text-text-tertiary text-lg max-w-2xl mx-auto">
+          A showcase of my recent work spanning machine learning, web development, and innovative solutions.
+        </p>
+      </motion.div>
+
+      {/* Filter Tags */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex flex-wrap justify-center items-center gap-3 mb-12"
+      >
+        {["All", "Machine Learning", "Web", "Mobile"].map((tagName, index) => (
+          <ProjectTag
+            key={tagName}
+            onClick={handleTagChange}
+            name={tagName}
+            isSelected={tag === tagName}
+          />
+        ))}
+      </motion.div>
+
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
+          <motion.div
+            key={project.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              technologies={project.technologies}
+              status={project.status}
             />
-          </motion.li>
+          </motion.div>
         ))}
-      </ul>
+      </div>
 
-      <div className="text-white flex flex-col justify-center items-center gap-2 py-6">
-        <div
-          style={{
-            position: "relative",
-            width: "80%",
-            height: "0",
-            paddingTop: "56.25%",
-            paddingBottom: "0",
-            boxShadow: "0 2px 8px 0 rgba(63,69,81,0.16)",
-            marginTop: "1.6em",
-            marginBottom: "0.9em",
-            overflow: "hidden",
-            borderRadius: "8px",
-            willChange: "transform",
-          }}
-        >
+      {/* Portfolio Presentation */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="card max-w-4xl mx-auto"
+      >
+        <h3 className="text-2xl font-bold text-text-primary mb-4">
+          <span className="text-gradient">Portfolio</span> Presentation
+        </h3>
+        <p className="text-text-tertiary mb-6">
+          Explore my comprehensive portfolio presentation showcasing all projects and achievements.
+        </p>
+        
+        <div className="relative w-full h-0 pb-[56.25%] rounded-2xl overflow-hidden shadow-dark-lg">
           <iframe
             loading="lazy"
-            style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              top: "0",
-              left: "0",
-              border: "none",
-              padding: "0",
-              margin: "0",
-            }}
+            className="absolute inset-0 w-full h-full"
             src="https://www.canva.com/design/DAGiPyJtZxA/6ZbqaJsbauNKVctmgPuoEQ/view?embed"
-            allowfullscreen="allowfullscreen"
+            allowFullScreen
             allow="fullscreen"
-          ></iframe>
+          />
         </div>
-        <a
-          href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGiPyJtZxA&#x2F;6ZbqaJsbauNKVctmgPuoEQ&#x2F;view?utm_content=DAGiPyJtZxA&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+        
+        <motion.a
+          href="https://www.canva.com/design/DAGiPyJtZxA/6ZbqaJsbauNKVctmgPuoEQ/view?utm_content=DAGiPyJtZxA&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
           target="_blank"
-          rel="noopener"
-          className="text-white underline "
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-6 text-accent-primary hover:text-accent-secondary transition-colors duration-300 group"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          My Portofolio in Slider
-        </a>{" "}
-       
-      </div>
+          <span className="font-medium">View Full Portfolio Presentation</span>
+          <ArrowTopRightOnSquareIcon className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+        </motion.a>
+      </motion.div>
     </section>
   );
 };

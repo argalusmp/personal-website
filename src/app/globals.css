@@ -1,33 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 26, 26, 26;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      135deg,
+      rgb(var(--background-start-rgb)) 0%,
+      rgb(var(--background-end-rgb)) 100%
+    );
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* Selection styles */
+::selection {
+  background: #6366f1;
+  color: white;
+}
+
+::-moz-selection {
+  background: #6366f1;
+  color: white;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-primary text-white font-medium rounded-xl hover:shadow-glow transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-dark-card text-text-primary font-medium rounded-xl border border-border-primary hover:border-accent-primary hover:shadow-glow transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-dark-card border border-border-primary rounded-2xl p-6 shadow-dark hover:shadow-dark-lg transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply card hover:border-accent-primary hover:shadow-glow transform hover:scale-105;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-secondary {
+    @apply bg-gradient-secondary bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-dark-surface/50 backdrop-blur-sm border border-border-primary/50;
+  }
+  
+  .glow-border {
+    @apply relative;
+  }
+  
+  .glow-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl bg-gradient-primary opacity-0 transition-opacity duration-300;
+    z-index: -1;
+    padding: 1px;
+  }
+  
+  .glow-border:hover::before {
+    @apply opacity-100;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }

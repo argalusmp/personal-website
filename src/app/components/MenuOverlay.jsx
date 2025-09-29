@@ -1,15 +1,34 @@
 import React from "react";
 import NavLink from "./NavLink";
+import { motion } from "framer-motion";
 
-const MenuOverlay = ({ links }) => {
+const MenuOverlay = ({ links, onClose }) => {
   return (
-    <ul className="flex flex-col py-4 items-center">
-      {links.map((link, index) => (
-        <li key={index}>
-          <NavLink href={link.path} title={link.title} />
-        </li>
-      ))}
-    </ul>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="py-6"
+    >
+      <ul className="flex flex-col space-y-2">
+        {links.map((link, index) => (
+          <motion.li
+            key={index}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+          >
+            <NavLink 
+              href={link.path} 
+              title={link.title} 
+              onClick={onClose}
+              isActive={false}
+            />
+          </motion.li>
+        ))}
+      </ul>
+    </motion.div>
   );
 };
 
