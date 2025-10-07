@@ -21,7 +21,7 @@ const TAB_DATA = [
         <div className="card">
           <h4 className="text-lg font-semibold text-text-primary mb-2">Bangkit Academy</h4>
           <p className="text-text-secondary">
-            Selected participant in Google, GoTo & Traveloka's intensive machine learning program
+            Selected participant in Google, GoTo & Traveloka&apos;s intensive machine learning program
           </p>
         </div>
       </div>
@@ -155,14 +155,14 @@ const AboutSection = () => {
         >
           <div className="mb-8">
             <p className="text-text-secondary text-lg leading-relaxed mb-6">
-              I'm an Entry-Level IT Developer specializing in Data Science with hands-on experience 
-              in software development, particularly in DS & LLM-based chatbot solutions. I've successfully 
+              I&apos;m an Entry-Level IT Developer specializing in Data Science with hands-on experience 
+              in software development, particularly in DS & LLM-based chatbot solutions. I&apos;ve successfully 
               cut manual reporting time by 70% through automation and built RAG/LLM prototypes using 
               Python & vector stores.
             </p>
             <p className="text-text-secondary text-lg leading-relaxed">
               With strong expertise in JavaScript, Python, Pandas, scikit-learn, TensorFlow, SQL, 
-              and experiment tracking/evaluation, I'm eager to deliver measurable business impact 
+              and experiment tracking/evaluation, I&apos;m eager to deliver measurable business impact 
               through innovative technology solutions.
             </p>
           </div>
