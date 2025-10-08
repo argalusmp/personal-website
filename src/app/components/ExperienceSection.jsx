@@ -6,18 +6,18 @@ import { useRef } from "react";
 
 const experiences = [
   {
-    title: "Developer Intern",
+    title: "SoftwareDeveloper Intern",
     company: "Berlian Sistem Informasi",
     period: "Nov 2024 - Feb 2025",
     type: "Internship",
     description: "Developed web applications using Laravel framework and contributed to system architecture improvements.",
     achievements: [
-      "Built responsive web applications using Laravel and PHP",
-      "Collaborated with team to improve system performance",
-      "Implemented database optimization techniques",
-      "Participated in code reviews and testing processes"
+      "Implemented ERP change requests to support 5 new division",
+      "Reduced manual reporting time by 70% through automation features",
+      "Assisted the development team in building, testing, and maintaining business applications",
+      "Wrote program code using appropriate programming languages such as JavaScript (React) and .NET"
     ],
-    technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap"],
+    technologies: ["Javacscript", "React", "SQL Server", "Git", ".Net"],
     icon: "💼"
   },
   {
@@ -189,7 +189,7 @@ const ExperienceSection = () => {
           </div>
           <p className="text-text-secondary max-w-2xl mx-auto">
             Specialized in software development, data structures, algorithms, and machine learning. 
-            Active in various programming competitions and tech communities.
+            Have a good understanding of the software development process and the ability to work in a team.
           </p>
         </div>
       </motion.div>

@@ -174,7 +174,7 @@ const HeroSection = () => {
               <div className="absolute inset-2 bg-dark-primary rounded-full"></div>
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-accent-primary/30 shadow-glow-lg">
                 <Image
-                  src="/images/profil.jpg"
+                  src="/images/main-profil.png"
                   alt="Vidi Marpaung"
                   fill
                   className="object-cover"

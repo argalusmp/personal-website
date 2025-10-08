@@ -34,11 +34,11 @@ const TAB_DATA = [
     content: (
       <div className="space-y-4">
         <div className="card">
-          <h4 className="text-lg font-semibold text-text-primary mb-2">Developer Intern</h4>
+          <h4 className="text-lg font-semibold text-text-primary mb-2">Software Developer Intern</h4>
           <p className="text-accent-primary font-medium mb-1">Berlian Sistem Informasi</p>
           <p className="text-text-tertiary text-sm mb-2">Nov 2024 - Feb 2025</p>
           <p className="text-text-secondary text-sm">
-            Developed web applications using Laravel framework and contributed to system architecture improvements.
+            Developed web applications and contributed to system architecture improvements reduced reporting time by 70%.
           </p>
         </div>
         <div className="card">
@@ -46,7 +46,7 @@ const TAB_DATA = [
           <p className="text-accent-primary font-medium mb-1">Braincore</p>
           <p className="text-text-tertiary text-sm mb-2">Jul 2024 - Oct 2024</p>
           <p className="text-text-secondary text-sm">
-            Built ML models, reduced reporting time by 70%, and developed RAG/LLM prototypes.
+            Built ML models and developed RAG/LLM prototypes to create a chatbot.
           </p>
         </div>
       </div>

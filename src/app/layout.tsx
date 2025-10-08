@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Vidi Marpaung Portfolio",
     images: [
       {
-        url: "/images/profil.jpg",
+        url: "/images/main-profil.png",
         width: 1200,
         height: 630,
         alt: "Vidi Marpaung Portfolio",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vidi Marpaung - Data Scientist & Web Developer",
     description: "Portfolio website showcasing data science projects and web development skills",
-    images: ["/images/profil.jpg"],
+    images: ["/images/main-profil.png"],
   },
   robots: {
     index: true,

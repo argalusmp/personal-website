@@ -86,7 +86,7 @@ const projectsData = [
     tag: ["All", "Machine Learning"],
     gitUrl: "https://github.com/argalusmp/gestura_app",
     previewUrl: "/",
-    technologies: ["Computer Vision", "TensorFlow", "Python", "OpenCV"],
+    technologies: ["Computer Vision", "Gesture Recognition", "Python", "Machine Learning"],
     status: "Completed"
   },
   {
