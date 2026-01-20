@@ -9,40 +9,60 @@ const skillsData = [
     category: "Programming Languages",
     skills: [
       { name: "Python", level: 90, icon: "🐍" },
-      { name: "JavaScript", level: 85, icon: "⚡" },
-      { name: "TypeScript", level: 80, icon: "📘" },
-      { name: "PHP", level: 75, icon: "🐘" },
-      { name: "SQL", level: 85, icon: "🗄️" },
+      { name: "JavaScript", level: 88, icon: "⚡" },
+      { name: "TypeScript", level: 85, icon: "📘" },
+      { name: "SQL", level: 88, icon: "🗄️" },
     ]
   },
   {
     category: "Data Science & ML",
     skills: [
+      { name: "Pandas", level: 92, icon: "🐼" },
+      { name: "Scikit-learn", level: 88, icon: "🔬" },
       { name: "TensorFlow", level: 85, icon: "🧠" },
-      { name: "Pandas", level: 90, icon: "🐼" },
-      { name: "Scikit-learn", level: 85, icon: "🔬" },
       { name: "NumPy", level: 88, icon: "🔢" },
-      { name: "Matplotlib", level: 80, icon: "📊" },
+      { name: "RAG/LLM Engineering", level: 85, icon: "🤖" },
+      { name: "Data Visualization", level: 82, icon: "📊" },
+      { name: "Feature Engineering", level: 85, icon: "⚙️" },
     ]
   },
   {
-    category: "Web Development",
+    category: "Backend Development",
     skills: [
-      { name: "React", level: 85, icon: "⚛️" },
-      { name: "Next.js", level: 80, icon: "▲" },
-      { name: "Laravel", level: 75, icon: "🔴" },
-      { name: "Tailwind CSS", level: 90, icon: "🎨" },
-      { name: "Node.js", level: 70, icon: "🟢" },
+      { name: "FastAPI", level: 88, icon: "⚡" },
+      { name: "NestJS", level: 80, icon: "🔺" },
+      { name: "RESTful API", level: 90, icon: "🔌" },
+      { name: "PostgreSQL", level: 85, icon: "🐘" },
+      { name: "MySQL", level: 85, icon: "🗄️" },
     ]
   },
   {
-    category: "Tools & Technologies",
+    category: "Frontend Development",
     skills: [
-      { name: "Git", level: 85, icon: "🌿" },
-      { name: "Docker", level: 70, icon: "🐳" },
-      { name: "AWS", level: 65, icon: "☁️" },
-      { name: "MongoDB", level: 75, icon: "🍃" },
-      { name: "PostgreSQL", level: 80, icon: "🐘" },
+      { name: "React.js", level: 88, icon: "⚛️" },
+      { name: "Next.js", level: 85, icon: "▲" },
+      { name: "Tailwind CSS", level: 92, icon: "🎨" },
+      { name: "Responsive Design", level: 90, icon: "📱" },
+    ]
+  },
+  {
+    category: "Tools & Platforms",
+    skills: [
+      { name: "Git/Github", level: 90, icon: "🌿" },
+      { name: "Docker", level: 75, icon: "🐳" },
+      { name: "Microsoft Excel", level: 88, icon: "📊" },
+      { name: "Looker Studio", level: 80, icon: "📈" },
+      { name: "Vector DB", level: 82, icon: "🗃️" },
+    ]
+  },
+  {
+    category: "Soft Skills",
+    skills: [
+      { name: "Critical Thinking", level: 90, icon: "🎯" },
+      { name: "Problem Solving", level: 92, icon: "🧩" },
+      { name: "Time Management", level: 88, icon: "⏰" },
+      { name: "Teamwork", level: 90, icon: "🤝" },
+      { name: "Adaptability", level: 88, icon: "🔄" },
     ]
   }
 ];
@@ -122,15 +142,15 @@ const SkillsSection = () => {
         className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
       >
         <div className="card text-center">
-          <div className="text-3xl font-bold text-gradient mb-2">3+</div>
-          <div className="text-text-tertiary">Years of Experience</div>
+          <div className="text-3xl font-bold text-gradient mb-2">70%</div>
+          <div className="text-text-tertiary">Efficiency Improvement</div>
         </div>
         <div className="card text-center">
-          <div className="text-3xl font-bold text-gradient mb-2">20+</div>
-          <div className="text-text-tertiary">Projects Completed</div>
+          <div className="text-3xl font-bold text-gradient mb-2">92%</div>
+          <div className="text-text-tertiary">RAG Chatbot Accuracy</div>
         </div>
         <div className="card text-center">
-          <div className="text-3xl font-bold text-gradient mb-2">5+</div>
+          <div className="text-3xl font-bold text-gradient mb-2">15+</div>
           <div className="text-text-tertiary">Technologies Mastered</div>
         </div>
       </motion.div>

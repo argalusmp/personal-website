@@ -14,15 +14,17 @@ const TAB_DATA = [
         <div className="card">
           <h4 className="text-lg font-semibold text-text-primary mb-2">Education</h4>
           <p className="text-text-secondary">
-            Bachelor of Informatics Engineering from Politeknik Negeri Jakarta (2021-2024)
+            Bachelor&apos;s Degree in Informatics Engineering (Diploma 4)
           </p>
-          <p className="text-text-tertiary text-sm mt-1">GPA: 3.73/4.00</p>
+          <p className="text-accent-primary font-medium">Politeknik Negeri Jakarta</p>
+          <p className="text-text-tertiary text-sm mt-1">2021 - 2025 • GPA: 3.73/4.00</p>
         </div>
         <div className="card">
-          <h4 className="text-lg font-semibold text-text-primary mb-2">Bangkit Academy</h4>
+          <h4 className="text-lg font-semibold text-text-primary mb-2">Location</h4>
           <p className="text-text-secondary">
-            Selected participant in Google, GoTo & Traveloka&apos;s intensive machine learning program
+            📍 Depok, West Java, Indonesia
           </p>
+          <p className="text-text-tertiary text-sm mt-1">Open to Remote & On-site Opportunities</p>
         </div>
       </div>
     ),
@@ -34,19 +36,19 @@ const TAB_DATA = [
     content: (
       <div className="space-y-4">
         <div className="card">
-          <h4 className="text-lg font-semibold text-text-primary mb-2">Software Developer Intern</h4>
-          <p className="text-accent-primary font-medium mb-1">Berlian Sistem Informasi</p>
-          <p className="text-text-tertiary text-sm mb-2">Nov 2024 - Feb 2025</p>
+          <h4 className="text-lg font-semibold text-text-primary mb-2">Business Support - IT & Risk</h4>
+          <p className="text-accent-primary font-medium mb-1">PT Bank Rakyat Indonesia (Persero) Tbk.</p>
+          <p className="text-text-tertiary text-sm mb-2">Nov 2025 - Present</p>
           <p className="text-text-secondary text-sm">
-            Developed web applications and contributed to system architecture improvements reduced reporting time by 70%.
+            Leading data quality assurance and standardization for internal validation platform.
           </p>
         </div>
         <div className="card">
-          <h4 className="text-lg font-semibold text-text-primary mb-2">Data Scientist Intern</h4>
-          <p className="text-accent-primary font-medium mb-1">Braincore</p>
-          <p className="text-text-tertiary text-sm mb-2">Jul 2024 - Oct 2024</p>
+          <h4 className="text-lg font-semibold text-text-primary mb-2">Backend Developer (Freelance)</h4>
+          <p className="text-accent-primary font-medium mb-1">Purple Box AI</p>
+          <p className="text-text-tertiary text-sm mb-2">Oct 2025 - Present (Remote)</p>
           <p className="text-text-secondary text-sm">
-            Built ML models and developed RAG/LLM prototypes to create a chatbot.
+            Implementing platform integrations (Shopify, WooCommerce APIs) using Python & NestJS.
           </p>
         </div>
       </div>
@@ -74,19 +76,23 @@ const TAB_DATA = [
           </ul>
         </div>
         <div className="card">
-          <h4 className="text-lg font-semibold text-text-primary mb-2">Technical Impact</h4>
+          <h4 className="text-lg font-semibold text-text-primary mb-2">Key Achievements</h4>
           <ul className="space-y-2 text-text-secondary text-sm">
             <li className="flex items-start gap-2">
               <span className="text-accent-primary mt-1">•</span>
-              Reduced manual reporting time by 70% through automation
+              🚀 70% reduction in manual reporting time through automation
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent-primary mt-1">•</span>
-              Built RAG/LLM prototypes with Python & vector stores
+              🤖 92% accuracy RAG-based chatbot (SkripsIA) for thesis Q&A
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent-primary mt-1">•</span>
-              Developed recommendation systems using content-based filtering
+              🏢 Onboarded 5 new divisions through ERP implementation
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-accent-primary mt-1">•</span>
+              🔗 Integrated Shopify & WooCommerce APIs for SEO services
             </li>
           </ul>
         </div>
@@ -135,13 +141,13 @@ const AboutSection = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-2xl opacity-20 scale-110"></div>
             <div className="relative">
-              <Image
-                src="/images/about-me-image.png"
-                alt="About Vidi Marpaung"
-                width={500}
-                height={500}
-                className="rounded-3xl shadow-dark-lg"
-              />
+                <Image
+                  src="/images/about-me-image.png"
+                  alt="About Vidi Septri Argalus MP"
+                  width={500}
+                  height={500}
+                  className="rounded-3xl shadow-dark-lg"
+                />
             </div>
           </div>
         </motion.div>
@@ -155,15 +161,16 @@ const AboutSection = () => {
         >
           <div className="mb-8">
             <p className="text-text-secondary text-lg leading-relaxed mb-6">
-              I&apos;m an Entry-Level IT Developer specializing in Data Science with hands-on experience 
-              in software development, particularly in DS & LLM-based chatbot solutions. I&apos;ve successfully 
-              cut manual reporting time by 70% through automation and built RAG/LLM prototypes using 
-              Python & vector stores.
+              I&apos;m a solution-oriented IT Developer and Data Scientist with a strong foundation in 
+              full-stack development and Machine Learning/LLM engineering. Currently contributing to 
+              data quality initiatives at PT Bank Rakyat Indonesia and developing backend solutions at 
+              Purple Box AI, I&apos;ve demonstrated measurable impact through a 70% reduction in manual 
+              reporting time and successful RAG/LLM chatbot prototype development achieving 92% accuracy.
             </p>
             <p className="text-text-secondary text-lg leading-relaxed">
-              With strong expertise in JavaScript, Python, Pandas, scikit-learn, TensorFlow, SQL, 
-              and experiment tracking/evaluation, I&apos;m eager to deliver measurable business impact 
-              through innovative technology solutions.
+              Proficient in Python (Pandas, scikit-learn, TensorFlow), JavaScript/TypeScript (React, Next.js, NestJS), 
+              FastAPI, SQL, and robust experiment tracking. Eager to leverage technical expertise to deliver 
+              measurable business impact through innovative solutions and continuous learning.
             </p>
           </div>
 

@@ -84,7 +84,7 @@ const Navbar = () => {
             >
               <Image
                 src="/images/logo_nobg.png"
-                alt="Vidi Marpaung Logo"
+                alt="Vidi Septri Argalus MP Logo"
                 width={50}
                 height={50}
                 className="rounded-full border-2 border-transparent group-hover:border-accent-primary transition-all duration-300"
@@ -92,9 +92,9 @@ const Navbar = () => {
             </motion.div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-text-primary group-hover:text-gradient transition-all duration-300">
-                Vidi Marpaung
+                Vidi Argalus
               </h1>
-              <p className="text-xs text-text-tertiary">Data Scientist & Developer</p>
+              <p className="text-xs text-text-tertiary">IT Developer & Data Scientist</p>
             </div>
           </Link>
 

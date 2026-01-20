@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Vidi Marpaung - Data Scientist & Web Developer",
-  description: "Portfolio website showcasing data science projects, web development skills, and professional experience in machine learning and full-stack development.",
-  keywords: "Vidi Marpaung, Data Scientist, Web Developer, Machine Learning, Python, React, Next.js, Portfolio",
-  authors: [{ name: "Vidi Marpaung" }],
-  creator: "Vidi Marpaung",
+  title: "Vidi Septri Argalus MP - IT Developer & Data Scientist",
+  description: "Solution-oriented IT Developer and Data Scientist specializing in full-stack development (JavaScript/React, Python/FastAPI) and Machine Learning/LLM engineering. Proven track record with 70% reduction in manual reporting time and successful RAG/LLM chatbot development.",
+  keywords: "Vidi Septri Argalus, Vidi Argalus, Data Scientist, IT Developer, Machine Learning Engineer, LLM, RAG, Python, FastAPI, React, Next.js, NestJS, Portfolio, Backend Developer",
+  authors: [{ name: "Vidi Septri Argalus MP" }],
+  creator: "Vidi Septri Argalus MP",
   openGraph: {
-    title: "Vidi Marpaung - Data Scientist & Web Developer",
-    description: "Portfolio website showcasing data science projects and web development skills",
-    url: "https://vidi-marpaung.vercel.app",
-    siteName: "Vidi Marpaung Portfolio",
+    title: "Vidi Septri Argalus MP - IT Developer & Data Scientist",
+    description: "Solution-oriented IT Developer & Data Scientist with expertise in full-stack development and Machine Learning/LLM engineering",
+    url: "https://vidi-argalus.vercel.app",
+    siteName: "Vidi Argalus Portfolio",
     images: [
       {
         url: "/images/main-profil.png",
         width: 1200,
         height: 630,
-        alt: "Vidi Marpaung Portfolio",
+        alt: "Vidi Septri Argalus MP Portfolio",
       },
     ],
     locale: "en_US",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vidi Marpaung - Data Scientist & Web Developer",
-    description: "Portfolio website showcasing data science projects and web development skills",
+    title: "Vidi Septri Argalus MP - IT Developer & Data Scientist",
+    description: "Solution-oriented IT Developer & Data Scientist with expertise in full-stack development and Machine Learning/LLM engineering",
     images: ["/images/main-profil.png"],
   },
   robots: {

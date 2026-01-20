@@ -26,19 +26,19 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/images/logo_nobg.png"
-                alt="Vidi Marpaung Logo"
+                alt="Vidi Septri Argalus MP Logo"
                 width={40}
                 height={40}
                 className="rounded-full"
               />
               <div>
-                <h3 className="text-xl font-bold text-text-primary">Vidi Marpaung</h3>
-                <p className="text-text-tertiary text-sm">Data Scientist & Developer</p>
+                <h3 className="text-xl font-bold text-text-primary">Vidi Septri Argalus MP</h3>
+                <p className="text-text-tertiary text-sm">IT Developer & Data Scientist</p>
               </div>
             </div>
             <p className="text-text-secondary max-w-md leading-relaxed">
-              Passionate about creating intelligent solutions that bridge the gap between data and business value. 
-              Let&apos;s build the future together.
+              Solution-oriented IT Developer and Data Scientist driving efficiency through automation 
+              and building intelligent RAG/LLM solutions. Let&apos;s create measurable business impact together.
             </p>
           </motion.div>
 
@@ -79,8 +79,9 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold text-text-primary mb-4">Contact</h4>
             <div className="space-y-2 text-text-tertiary">
-              <p>Jakarta, Indonesia</p>
-              <p>septriargalus@gmail.com</p>
+              <p>📍 Depok, West Java, Indonesia</p>
+              <p>📧 septriargalus@gmail.com</p>
+              <p>📱 +62 812-7973-3385</p>
               <div className="flex gap-3 mt-4">
                 <a
                   href="https://github.com/argalusmp"
@@ -126,7 +127,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-text-tertiary text-sm flex items-center gap-1"
           >
-            © 2024 Vidi Marpaung. Made with <HeartIcon className="h-4 w-4 text-red-500" /> and passion.
+            © 2025 Vidi Septri Argalus MP. Made with <HeartIcon className="h-4 w-4 text-red-500" /> and passion.
           </motion.p>
           
           <motion.button

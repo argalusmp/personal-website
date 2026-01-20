@@ -5,7 +5,8 @@ import {
   EnvelopeIcon,
   MapPinIcon,
   PhoneIcon,
-  PaperAirplaneIcon
+  PaperAirplaneIcon,
+  DocumentArrowDownIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
@@ -59,9 +60,15 @@ const EmailSection = () => {
       href: "mailto:septriargalus@gmail.com"
     },
     {
+      icon: PhoneIcon,
+      label: "Phone",
+      value: "+62 812-7973-3385",
+      href: "tel:+6281279733385"
+    },
+    {
       icon: MapPinIcon,
       label: "Location",
-      value: "Jakarta, Indonesia",
+      value: "Depok, West Java, Indonesia",
       href: null
     }
   ];
@@ -114,6 +121,7 @@ const EmailSection = () => {
               Get In Touch
             </h3>
             <p className="text-text-secondary text-lg leading-relaxed mb-8">
+              I&apos;m available for freelance opportunities, full-time positions, or consulting work. 
               Whether you have a project in mind, want to collaborate, or just want to say hello, 
               I&apos;d love to hear from you. Let&apos;s create something amazing together!
             </p>
@@ -157,7 +165,7 @@ const EmailSection = () => {
             <h4 className="text-lg font-semibold text-text-primary mb-4">
               Follow Me
             </h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
@@ -190,6 +198,23 @@ const EmailSection = () => {
               ))}
             </div>
           </div>
+
+          {/* Download CV Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            className="mt-8"
+          >
+            <a 
+              href="/CV_VIDI SEPTRI ARGALUS MP.pdf" 
+              download="CV_Vidi_Septri_Argalus_MP.pdf"
+              className="inline-flex items-center gap-2 btn-primary group"
+            >
+              <DocumentArrowDownIcon className="h-5 w-5 group-hover:translate-y-1 transition-transform duration-300" />
+              <span>Download Full Resume</span>
+            </a>
+          </motion.div>
         </motion.div>
 
       </div>

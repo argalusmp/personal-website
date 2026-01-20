@@ -6,49 +6,68 @@ import { useRef } from "react";
 
 const experiences = [
   {
-    title: "SoftwareDeveloper Intern",
-    company: "Berlian Sistem Informasi",
-    period: "Nov 2024 - Feb 2025",
-    type: "Internship",
-    description: "Developed web applications using Laravel framework and contributed to system architecture improvements.",
+    title: "Business Support - IT and Risk Division",
+    company: "PT Bank Rakyat Indonesia (Persero) Tbk.",
+    location: "South Jakarta, Indonesia",
+    period: "Nov 2025 - Present",
+    type: "Full-time",
+    description: "Leading data quality assurance initiatives for internal validation platform, ensuring data integrity across multiple sources.",
     achievements: [
-      "Implemented ERP change requests to support 5 new division",
-      "Reduced manual reporting time by 70% through automation features",
-      "Assisted the development team in building, testing, and maintaining business applications",
-      "Wrote program code using appropriate programming languages such as JavaScript (React) and .NET"
+      "Spearheaded data quality assurance by collecting and rigorously cleaning high-volume customer data from physical and digital sources",
+      "Ensured data integrity by standardizing critical data formats (NPWP, NIK, dates, document numbers)",
+      "Resolved data inconsistencies, duplicates, and missing values to maintain validation accuracy",
+      "Provided structured, clean datasets for validation process and business intelligence analysis"
     ],
-    technologies: ["Javacscript", "React", "SQL Server", "Git", ".Net"],
+    technologies: ["Data Quality", "Data Cleaning", "Data Standardization", "SQL", "Python", "Excel"],
+    icon: "🏦"
+  },
+  {
+    title: "Backend Developer (Freelance)",
+    company: "Purple Box AI",
+    location: "Madrid, Spain (Remote)",
+    period: "Oct 2025 - Present",
+    type: "Freelance",
+    description: "Implementing platform integrations for agency-SEO services, bridging internal services with external e-commerce platforms.",
+    achievements: [
+      "Implemented platform integration for agency-SEO services as bridge between internal and external platforms",
+      "Successfully integrated Shopify and WooCommerce APIs for direct product management",
+      "Assisted in AI service development to enhance core SEO tools with focus on stability and scalability",
+      "Wrote production-ready code utilizing Python and JavaScript (NestJS) for robust backend functionalities"
+    ],
+    technologies: ["Python", "NestJS", "TypeScript", "Shopify API", "WooCommerce API", "RESTful API", "AI Services"],
+    icon: "🚀"
+  },
+  {
+    title: "Software Developer Intern",
+    company: "PT Berlian Sistem Informasi",
+    location: "East Jakarta, Indonesia",
+    period: "Oct 2024 - Feb 2025",
+    type: "Internship",
+    description: "Drove business expansion through ERP system implementation and automation features, significantly improving operational efficiency.",
+    achievements: [
+      "Drove business expansion by implementing complex ERP change requests to onboard 5 new company divisions",
+      "Achieved 70% reduction in manual reporting time by designing and implementing automation features",
+      "Collaborated with core development team in full lifecycle: building, testing, and maintenance",
+      "Developed and maintained features using JavaScript (React) to enhance application functionality"
+    ],
+    technologies: ["JavaScript", "React", "ERP Systems", ".NET", "SQL Server", "Git"],
     icon: "💼"
   },
   {
-    title: "Data Scientist Intern",
-    company: "Braincore",
+    title: "Data Science Intern",
+    company: "PT Algonacci Sobat Nusantara",
+    location: "West Jakarta, Indonesia",
     period: "Jul 2024 - Oct 2024",
     type: "Internship",
-    description: "Developed machine learning models and data analysis solutions for business intelligence applications.",
+    description: "Contributed to cutting-edge LLM-based chatbot development and end-to-end data pipeline implementation.",
     achievements: [
-      "Built recommendation systems using content-based filtering",
-      "Reduced manual reporting time by 70% through automation",
-      "Developed RAG/LLM prototypes with Python and vector stores",
-      "Implemented experiment tracking and model evaluation pipelines"
+      "Contributed to state-of-the-art LLM-based chatbot development including prompt engineering and validation",
+      "Assisted data science team in end-to-end data pipeline: collecting, cleaning, and analyzing structured/unstructured data",
+      "Applied statistical analysis and ML techniques to identify predictive patterns in large datasets",
+      "Kept up-to-date with latest developments in data science and machine learning technologies"
     ],
-    technologies: ["Python", "TensorFlow", "Pandas", "Scikit-learn", "SQL", "Machine Learning"],
+    technologies: ["Python", "LLM", "RAG", "NLP", "Pandas", "TensorFlow", "Machine Learning", "Data Analysis"],
     icon: "🧠"
-  },
-  {
-    title: "Student",
-    company: "Bangkit Academy by Google, GoTo & Traveloka",
-    period: "Feb 2021 - Aug 2021",
-    type: "Program",
-    description: "Intensive learning program focusing on machine learning fundamentals and cloud computing.",
-    achievements: [
-      "Completed comprehensive machine learning curriculum",
-      "Built capstone project in recommendation systems",
-      "Learned cloud computing with Google Cloud Platform",
-      "Collaborated with cross-functional teams"
-    ],
-    technologies: ["Python", "Machine Learning", "Google Cloud", "TensorFlow", "Data Analysis"],
-    icon: "🎓"
   }
 ];
 
@@ -82,12 +101,18 @@ const ExperienceCard = ({ experience, index }) => {
               </span>
             </div>
             
-            <h4 className="text-lg font-medium text-gradient mb-2">
+            <h4 className="text-lg font-medium text-gradient mb-1">
               {experience.company}
             </h4>
             
+            {experience.location && (
+              <p className="text-text-tertiary text-sm mb-1">
+                📍 {experience.location}
+              </p>
+            )}
+            
             <p className="text-text-tertiary text-sm mb-3 font-medium">
-              {experience.period}
+              📅 {experience.period}
             </p>
             
             <p className="text-text-secondary mb-4">
@@ -177,20 +202,32 @@ const ExperienceSection = () => {
             <span className="text-4xl">🎓</span>
             <div>
               <h4 className="text-xl font-semibold text-text-primary">
-                Bachelor of Informatics Engineering
+                Bachelor&apos;s Degree in Informatics Engineering (Diploma 4)
               </h4>
               <p className="text-gradient font-medium">
                 Politeknik Negeri Jakarta
               </p>
               <p className="text-text-tertiary text-sm">
-                2021 - 2024 • GPA: 3.73/4.00
+                2021 - 2025 • GPA: 3.73/4.00
               </p>
             </div>
           </div>
-          <p className="text-text-secondary max-w-2xl mx-auto">
+          <p className="text-text-secondary max-w-2xl mx-auto mb-4">
             Specialized in software development, data structures, algorithms, and machine learning. 
-            Have a good understanding of the software development process and the ability to work in a team.
+            Strong foundation in full-stack development and data science with proven ability to work in collaborative teams.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            <div className="card text-center px-6 py-3">
+              <div className="text-xl font-bold text-gradient">🏅</div>
+              <p className="text-sm text-text-tertiary mt-1">Associate Data Scientist</p>
+              <p className="text-xs text-text-muted">LSP Informatika BNSP - 2025</p>
+            </div>
+            <div className="card text-center px-6 py-3">
+              <div className="text-xl font-bold text-gradient">📚</div>
+              <p className="text-sm text-text-tertiary mt-1">Bangkit Academy 2023</p>
+              <p className="text-xs text-text-muted">Machine Learning Cohort</p>
+            </div>
+          </div>
         </div>
       </motion.div>
     </section>

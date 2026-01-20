@@ -8,6 +8,19 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 const projectsData = [
   {
     id: 1,
+    title: "SkripsIA - AI-Powered Thesis Assistant",
+    description:
+      "Developed a high-performance RAG-based Chatbot achieving 92% answerable rate by indexing 5 critical thesis documents. Full-stack implementation with Python (FastAPI) backend, Next.js frontend, integrated with Vector DB and OpenAI API.",
+    image: "/images/projects/77.png",
+    tag: ["All", "Machine Learning", "Web"],
+    gitUrl: "https://github.com/argalusmp/skripsia",
+    previewUrl: "/",
+    technologies: ["Python", "FastAPI", "Next.js", "RAG", "LLM", "Vector DB", "OpenAI API"],
+    status: "Completed",
+    featured: true
+  },
+  {
+    id: 2,
     title: "Songs Recommendation System",
     description:
       "Built a sophisticated recommendation system using content-based filtering to provide personalized song suggestions based on user preferences and listening history.",
@@ -19,7 +32,7 @@ const projectsData = [
     status: "Completed"
   },
   {
-    id: 2,
+    id: 3,
     title: "Volunteer Recommendation System",
     description:
       "Developed an advanced recommendation system using TensorFlow to match volunteers with suitable opportunities based on their skills, preferences, and availability.",
@@ -31,7 +44,7 @@ const projectsData = [
     status: "Completed"
   },
   {
-    id: 3,
+    id: 4,
     title: "Real-time Group Chat App",
     description:
       "Created a cross-platform mobile application enabling real-time group conversations with modern UI/UX design and seamless user experience.",
@@ -43,7 +56,7 @@ const projectsData = [
     status: "Completed"
   },
   {
-    id: 4,
+    id: 5,
     title: "Restaurant Management Web App",
     description: "Designed and developed a comprehensive restaurant profile and management system with modern React.js frontend and responsive design.",
     image: "/images/projects/44.png",
@@ -54,7 +67,7 @@ const projectsData = [
     status: "Completed"
   },
   {
-    id: 5,
+    id: 6,
     title: "Laravel Todo Management System",
     description:
       "Built a full-featured task management application using Laravel framework with user authentication, CRUD operations, and modern web interface.",
@@ -66,7 +79,7 @@ const projectsData = [
     status: "Completed"
   },
   {
-    id: 6,
+    id: 7,
     title: "Laptop Price Prediction Model",
     description:
       "Developed a machine learning model to predict laptop prices using Kaggle datasets, helping consumers make informed purchasing decisions.",
@@ -78,7 +91,7 @@ const projectsData = [
     status: "Completed"
   },
   {
-    id: 7,
+    id: 8,
     title: "Indonesian Sign Language Recognition",
     description:
       "Created an AI-powered application that recognizes and interprets Indonesian sign language with high accuracy, bridging communication gaps for the deaf community.",
@@ -90,7 +103,7 @@ const projectsData = [
     status: "Completed"
   },
   {
-    id: 8,
+    id: 9,
     title: "IoT Waste Management System",
     description:
       "Designed an IoT-based waste monitoring and management system to help organize and track waste information efficiently.",
@@ -99,18 +112,6 @@ const projectsData = [
     gitUrl: "https://github.com/argalusmp/trashcker_IoT",
     previewUrl: "/",
     technologies: ["IoT", "Web Development", "Arduino", "PHP"],
-    status: "Completed"
-  },
-  {
-    id: 9,
-    title: "AI-Powered Thesis Assistant Chatbot",
-    description:
-      "Developed an intelligent chatbot to help university students find thesis-related information and resources using natural language processing.",
-    image: "/images/projects/77.png",
-    tag: ["All", "Web", "Machine Learning"],
-    gitUrl: "https://github.com/argalusmp/skripsia",
-    previewUrl: "/",
-    technologies: ["NLP", "Chatbot", "Web Development", "Machine Learning"],
     status: "Completed"
   },
 ];

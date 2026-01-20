@@ -4,7 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { ArrowDownIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { ArrowDownIcon, ArrowTopRightOnSquareIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -69,8 +69,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
           >
-            <span className="text-text-primary">Vidi</span>{" "}
-            <span className="text-gradient">Marpaung</span>
+            <span className="text-text-primary">Vidi Septri</span>{" "}
+            <span className="text-gradient">Argalus MP</span>
           </motion.h1>
 
           {/* Type Animation */}
@@ -82,13 +82,15 @@ const HeroSection = () => {
           >
             <TypeAnimation
               sequence={[
+                "IT Developer",
+                2000,
                 "Data Scientist",
+                2000,
+                "Backend Developer",
                 2000,
                 "Machine Learning Engineer",
                 2000,
-                "Full-Stack Developer",
-                2000,
-                "AI Enthusiast",
+                "LLM/RAG Specialist",
                 2000,
               ]}
               wrapper="span"
@@ -105,9 +107,10 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-text-tertiary text-lg lg:text-xl mb-8 max-w-2xl leading-relaxed"
           >
-            Fresh graduate in Informatics Engineering with expertise in data science, 
-            machine learning, and full-stack development. Passionate about creating 
-            intelligent solutions that bridge the gap between data and business value.
+            Solution-oriented IT Developer and Data Scientist with a strong foundation in 
+            full-stack development (JavaScript/React, Python/FastAPI) and Machine Learning/LLM 
+            engineering. Proven ability to drive efficiency through automation (70% reduction in 
+            manual reporting) and build intelligent RAG/LLM chatbot solutions.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -123,6 +126,17 @@ const HeroSection = () => {
                 <ArrowTopRightOnSquareIcon className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </span>
             </Link>
+            
+            <a 
+              href="/CV_VIDI SEPTRI ARGALUS MP.pdf" 
+              download="CV_Vidi_Septri_Argalus_MP.pdf"
+              className="btn-secondary group"
+            >
+              <span className="flex items-center gap-2">
+                Download CV
+                <DocumentArrowDownIcon className="h-4 w-4 group-hover:translate-y-1 transition-transform duration-300" />
+              </span>
+            </a>
             
             <Link href="/#projects" className="btn-secondary group">
               <span className="flex items-center gap-2">
@@ -140,15 +154,15 @@ const HeroSection = () => {
             className="mt-12 grid grid-cols-3 gap-6 text-center lg:text-left"
           >
             <div>
-              <div className="text-2xl font-bold text-gradient">3+</div>
-              <div className="text-text-tertiary text-sm">Years Experience</div>
+              <div className="text-2xl font-bold text-gradient">70%</div>
+              <div className="text-text-tertiary text-sm">Efficiency Boost</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gradient">20+</div>
-              <div className="text-text-tertiary text-sm">Projects Completed</div>
+              <div className="text-2xl font-bold text-gradient">92%</div>
+              <div className="text-text-tertiary text-sm">RAG Accuracy</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gradient">5+</div>
+              <div className="text-2xl font-bold text-gradient">10+</div>
               <div className="text-text-tertiary text-sm">Technologies</div>
             </div>
           </motion.div>
@@ -175,7 +189,7 @@ const HeroSection = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-accent-primary/30 shadow-glow-lg">
                 <Image
                   src="/images/main-profil.png"
-                  alt="Vidi Marpaung"
+                  alt="Vidi Septri Argalus MP"
                   fill
                   className="object-cover"
                   priority
