@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Vidi Septri Argalus MP - IT Developer & Data Scientist",
@@ -65,7 +66,8 @@ export default function RootLayout({
             <div className="absolute top-0 -right-4 w-72 h-72 bg-accent-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float" style={{ animationDelay: "2s" }}></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-accent-tertiary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float" style={{ animationDelay: "4s" }}></div>
           </div>
-          {children}
+          {/* Noise texture removed */}
+          <SmoothScroll>{children}</SmoothScroll>
         </div>
       </body>
     </html>

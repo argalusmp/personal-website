@@ -1,238 +1,148 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Link from "next/link";
-import { ArrowDownIcon, ArrowTopRightOnSquareIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const HeroSection = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, -50]);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.8,
+        ease: [0.215, 0.61, 0.355, 1],
+      },
+    }),
+  };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <motion.div
-          className="absolute w-96 h-96 bg-accent-primary/10 rounded-full blur-3xl"
-          animate={{
-            x: mousePosition.x * 0.02,
-            y: mousePosition.y * 0.02,
-          }}
-          transition={{ type: "spring", stiffness: 50, damping: 15 }}
-        />
-        <motion.div
-          className="absolute w-80 h-80 bg-accent-secondary/10 rounded-full blur-3xl top-1/2 right-0"
-          animate={{
-            x: mousePosition.x * -0.01,
-            y: mousePosition.y * 0.01,
-          }}
-          transition={{ type: "spring", stiffness: 50, damping: 15 }}
-        />
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center container-custom">
+    <section
+      ref={ref}
+      className="h-screen w-full flex items-center justify-center relative overflow-hidden"
+    >
+      <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 h-full">
         {/* Text Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="lg:col-span-7 text-center lg:text-left"
-        >
-          {/* Greeting */}
+        <motion.div style={{ opacity, scale, y }} className="text-center lg:text-left order-2 lg:order-1">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4"
+            initial="hidden"
+            animate="visible"
+            className="flex flex-col items-center lg:items-start gap-6"
           >
-            <span className="text-text-tertiary text-lg font-medium">
-              Hello, I&apos;m
-            </span>
-          </motion.div>
-
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
-          >
-            <span className="text-text-primary">Vidi Septri</span>{" "}
-            <span className="text-gradient">Argalus MP</span>
-          </motion.h1>
-
-          {/* Type Animation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mb-8"
-          >
-            <TypeAnimation
-              sequence={[
-                "IT Developer",
-                2000,
-                "Data Scientist",
-                2000,
-                "Backend Developer",
-                2000,
-                "Machine Learning Engineer",
-                2000,
-                "LLM/RAG Specialist",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gradient"
-            />
-          </motion.div>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="text-text-tertiary text-lg lg:text-xl mb-8 max-w-2xl leading-relaxed"
-          >
-            Solution-oriented IT Developer and Data Scientist with a strong foundation in 
-            full-stack development (JavaScript/React, Python/FastAPI) and Machine Learning/LLM 
-            engineering. Proven ability to drive efficiency through automation (70% reduction in 
-            manual reporting) and build intelligent RAG/LLM chatbot solutions.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-          >
-            <Link href="/#contact" className="btn-primary group">
-              <span className="flex items-center gap-2">
-                Get In Touch
-                <ArrowTopRightOnSquareIcon className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-              </span>
-            </Link>
-            
-            <a 
-              href="/CV_VIDI SEPTRI ARGALUS MP.pdf" 
-              download="CV_Vidi_Septri_Argalus_MP.pdf"
-              className="btn-secondary group"
+            {/* Intro Text */}
+            <motion.p
+              custom={0}
+              variants={textVariants}
+              className="text-text-secondary text-lg md:text-xl font-medium tracking-wide uppercase"
             >
-              <span className="flex items-center gap-2">
-                Download CV
-                <DocumentArrowDownIcon className="h-4 w-4 group-hover:translate-y-1 transition-transform duration-300" />
-              </span>
-            </a>
-            
-            <Link href="/#projects" className="btn-secondary group">
-              <span className="flex items-center gap-2">
-                View My Work
-                <ArrowDownIcon className="h-4 w-4 group-hover:translate-y-1 transition-transform duration-300" />
-              </span>
-            </Link>
-          </motion.div>
+              Hi, I&apos;m
+            </motion.p>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="mt-12 grid grid-cols-3 gap-6 text-center lg:text-left"
-          >
-            <div>
-              <div className="text-2xl font-bold text-gradient">70%</div>
-              <div className="text-text-tertiary text-sm">Efficiency Boost</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-gradient">92%</div>
-              <div className="text-text-tertiary text-sm">RAG Accuracy</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-gradient">10+</div>
-              <div className="text-text-tertiary text-sm">Technologies</div>
-            </div>
+            {/* Name */}
+            <motion.h1
+              custom={1}
+              variants={textVariants}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+            >
+              <span className="text-text-primary">Vidi Septri</span>
+              <br />
+              <div className="relative inline-block">
+                <span className="text-gradient bg-clip-text text-transparent relative z-10">
+                  Argalus MP
+                </span>
+                <motion.div 
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 1, duration: 0.8, ease: "circOut" }}
+                  className="absolute bottom-2 left-0 w-full h-4 bg-accent-primary/20 -z-0 origin-left"
+                ></motion.div>
+              </div>
+            </motion.h1>
+
+            {/* Role/Tagline */}
+            <motion.div custom={2} variants={textVariants} className="max-w-2xl">
+              <p className="text-xl md:text-2xl text-text-secondary leading-relaxed">
+                I build <span className="text-accent-primary font-semibold">digital experiences</span> that merge creativity with data-driven engineering.
+              </p>
+            </motion.div>
+
+            {/* Connect Lines / Decoration (Mobile hidden, Desktop visible) */}
+            <motion.div
+              custom={3}
+              variants={textVariants}
+              className="hidden lg:block w-24 h-px bg-gradient-to-r from-accent-primary/50 to-transparent mt-8"
+            ></motion.div>
           </motion.div>
         </motion.div>
 
-        {/* Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="lg:col-span-5 flex justify-center"
+        {/* Hero Image */}
+        <motion.div 
+          style={{ opacity, scale, y: useTransform(scrollYProgress, [0, 0.5], [0, -50]) }}
+          className="order-1 lg:order-2 flex justify-center lg:justify-end"
         >
-          <div className="relative">
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-30 scale-110 animate-pulse-slow"></div>
-            
-            {/* Image Container */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[600px]"
+          >
+            {/* Image Container with organic shape or mask */}
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 rounded-[2rem] rotate-6 blur-2xl"></div>
+            <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="/images/baju hitam.png"
+                alt="Vidi Septri Argalus MP"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                priority
+              />
+              {/* Overlay Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            </div>
+
+            {/* Floating Badge */}
             <motion.div
-              style={{ y }}
-              className="relative w-80 h-80 lg:w-96 lg:h-96"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-6 -right-6 bg-dark-card/90 backdrop-blur-md border border-accent-primary/30 p-4 rounded-xl shadow-glow hidden md:block z-20"
             >
-              <div className="absolute inset-0 bg-gradient-primary rounded-full opacity-20 animate-spin" style={{ animationDuration: "20s" }}></div>
-              <div className="absolute inset-2 bg-dark-primary rounded-full"></div>
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-accent-primary/30 shadow-glow-lg">
-                <Image
-                  src="/images/main-profil.png"
-                  alt="Vidi Septri Argalus MP"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-text-primary">Open to Work</span>
               </div>
-              
-              {/* Floating Elements */}
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 w-12 h-12 bg-accent-primary/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-accent-primary/30"
-              >
-                <span className="text-2xl">🧠</span>
-              </motion.div>
-              
-              <motion.div
-                animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -left-4 w-12 h-12 bg-accent-secondary/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-accent-secondary/30"
-              >
-                <span className="text-2xl">💻</span>
-              </motion.div>
             </motion.div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 
       {/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        style={{ opacity }}
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-tertiary flex flex-col items-center gap-2"
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center gap-2 text-text-tertiary"
-        >
-          <span className="text-sm">Scroll to explore</span>
-          <ArrowDownIcon className="h-5 w-5" />
-        </motion.div>
+        <span className="text-xs uppercase tracking-widest opacity-70">Scroll to Explore</span>
+        <ArrowDownIcon className="h-5 w-5" />
       </motion.div>
+
+      {/* Background Gradient Orbs */}
+      <div className="absolute inset-0 pointer-events-none -z-10">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-primary/5 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-secondary/5 rounded-full blur-[100px]"></div>
+      </div>
     </section>
   );
 };

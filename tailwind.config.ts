@@ -11,30 +11,30 @@ const config: Config = {
       colors: {
         // Dark theme color palette
         dark: {
-          primary: "#0a0a0a",      // Deep black
-          secondary: "#111111",    // Charcoal
-          tertiary: "#1a1a1a",     // Dark gray
-          accent: "#2a2a2a",       // Medium gray
-          surface: "#1e1e1e",      // Surface gray
-          card: "#252525",         // Card background
+          primary: "#0a0a0a",      // Deep black (Original)
+          secondary: "#111111",    // Charcoal (Original)
+          tertiary: "#1a1a1a",     // Dark gray (Original)
+          accent: "#2a2a2a",       // Medium gray (Original)
+          surface: "#1e1e1e",      // Surface gray (Original)
+          card: "#252525",         // Card background (Original)
         },
         accent: {
-          primary: "#6366f1",      // Indigo
-          secondary: "#8b5cf6",    // Purple
-          tertiary: "#ec4899",     // Pink
+          primary: "#2dd4bf",      // Teal-400 (Calm, precise, healing)
+          secondary: "#818cf8",    // Indigo-400 (Intellectual, cool)
+          tertiary: "#fbbf24",     // Amber-400 (Earthy, grounded gold)
           gold: "#f59e0b",         // Gold
-          cyan: "#06b6d4",         // Cyan
+          cyan: "#22d3ee",         // Cyan-400
         },
         text: {
-          primary: "#ffffff",      // Pure white
-          secondary: "#e5e7eb",    // Light gray
-          tertiary: "#9ca3af",     // Medium gray
-          muted: "#6b7280",        // Muted gray
+          primary: "#f5f5f5",      // Neutral-100 (Smoother white)
+          secondary: "#d4d4d4",    // Neutral-300 (Softer light grey)
+          tertiary: "#a3a3a3",     // Neutral-400 (Neutral medium grey)
+          muted: "#737373",        // Neutral-500
         },
         border: {
-          primary: "#374151",      // Border gray
-          secondary: "#4b5563",    // Lighter border
-          accent: "#6366f1",       // Accent border
+          primary: "#404040",      // Neutral-700
+          secondary: "#525252",    // Neutral-600
+          accent: "#2dd4bf",       // Teal border
         }
       },
       fontFamily: {
@@ -75,9 +75,9 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-primary": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
-        "gradient-secondary": "linear-gradient(135deg, #ec4899 0%, #f59e0b 100%)",
-        "gradient-dark": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)",
+        "gradient-primary": "linear-gradient(135deg, #2dd4bf 0%, #818cf8 100%)", // Teal to Indigo
+        "gradient-secondary": "linear-gradient(135deg, #818cf8 0%, #fbbf24 100%)", // Indigo to Amber
+        "gradient-dark": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)", // Deep Black to Dark Gray
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
