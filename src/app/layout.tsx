@@ -3,14 +3,15 @@ import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Vidi Septri Argalus MP - IT Developer & Data Scientist",
-  description: "Solution-oriented IT Developer and Data Scientist specializing in full-stack development (JavaScript/React, Python/FastAPI) and Machine Learning/LLM engineering. Proven track record with 70% reduction in manual reporting time and successful RAG/LLM chatbot development.",
-  keywords: "Vidi Septri Argalus, Vidi Argalus, Data Scientist, IT Developer, Machine Learning Engineer, LLM, RAG, Python, FastAPI, React, Next.js, NestJS, Portfolio, Backend Developer",
+  metadataBase: new URL("https://vidi-argalus.vercel.app"),
+  title: "Vidi Septri Argalus MP | IT Developer, Data & AI",
+  description: "Results-driven IT professional and Informatics Engineering graduate with experience in data analysis, backend development, machine learning, ERP implementation, and AI chatbot delivery. Highlights include a 70% reduction in manual reporting time and a high-answerable-rate RAG chatbot.",
+  keywords: "Vidi Septri Argalus, Vidi Argalus, Data Scientist, Data Analyst, Business Analyst, IT Developer, Backend Developer, Machine Learning, LLM, RAG, Python, FastAPI, React, Next.js, NestJS, ERP, PostgreSQL, Portfolio",
   authors: [{ name: "Vidi Septri Argalus MP" }],
   creator: "Vidi Septri Argalus MP",
   openGraph: {
-    title: "Vidi Septri Argalus MP - IT Developer & Data Scientist",
-    description: "Solution-oriented IT Developer & Data Scientist with expertise in full-stack development and Machine Learning/LLM engineering",
+    title: "Vidi Septri Argalus MP | IT Developer, Data & AI",
+    description: "IT professional and Informatics Engineering graduate focused on data analysis, backend development, machine learning, ERP systems, and AI chatbot delivery.",
     url: "https://vidi-argalus.vercel.app",
     siteName: "Vidi Argalus Portfolio",
     images: [
@@ -26,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vidi Septri Argalus MP - IT Developer & Data Scientist",
-    description: "Solution-oriented IT Developer & Data Scientist with expertise in full-stack development and Machine Learning/LLM engineering",
+    title: "Vidi Septri Argalus MP | IT Developer, Data & AI",
+    description: "IT professional and Informatics Engineering graduate focused on data analysis, backend development, machine learning, ERP systems, and AI chatbot delivery.",
     images: ["/images/main-profil.png"],
   },
   robots: {

@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import JourneySection from "./components/JourneySection";
 import ProjectShowcase from "./components/ProjectShowcase";
+import CanvaSection from "./components/CanvaSection";
 import SkillVisualization from "./components/SkillVisualization";
 import CTASection from "./components/CTASection";
 
@@ -24,6 +25,11 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects">
         <ProjectShowcase />
+      </section>
+
+      {/* Canva Presentation Section */}
+      <section id="canva-presentation">
+        <CanvaSection />
       </section>
 
       {/* Skills Section */}

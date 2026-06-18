@@ -7,19 +7,19 @@ import Image from "next/image";
 const timelineData = [
   {
     categories: ["Experience"],
-    title: "Business Support - IT & Risk",
+    title: "Business Support Internship - IT & Risk",
     organization: "PT Bank Rakyat Indonesia (Persero) Tbk.",
-    period: "Nov 2025 - Present",
-    description: "Leading data quality assurance and standardization for internal validation platforms.",
+    period: "Nov 2025 - Mei 2026",
+    description: "Standardized critical customer data fields, automated Excel-based reporting, and built PDF document management workflows for tax-office requests.",
     icon: BriefcaseIcon,
-    tags: ["Data Quality", "SQL", "Python"],
+    tags: ["Data Quality", "Python", "Automation"],
   },
   {
     categories: ["Experience"],
     title: "Backend Developer",
     organization: "Purple Box AI",
-    period: "Oct 2025 - Present",
-    description: "Implementing platform integrations (Shopify, WooCommerce APIs) using Python & NestJS.",
+    period: "Oct 2025 - Jan 2026",
+    description: "Built platform integrations for agency SEO services using Python and NestJS, connecting internal services with Shopify and WooCommerce APIs.",
     icon: BriefcaseIcon,
     tags: ["Python", "NestJS", "API Integration"],
   },
@@ -28,7 +28,7 @@ const timelineData = [
     title: "Associate Data Scientist",
     organization: "LSP Informatika BNSP",
     period: "2025",
-    description: "Professional certification validating data science expertise.",
+    description: "National professional certification validating practical data science competency.",
     icon: TrophyIcon,
     tags: ["Data Science", "Machine Learning"],
   },
@@ -37,16 +37,16 @@ const timelineData = [
     title: "Software Developer Intern",
     organization: "PT Berlian Sistem Informasi",
     period: "Oct 2024 - Feb 2025",
-    description: "Drove business expansion through ERP system implementation and automation features (70% efficiency boost).",
+    description: "Supported ERP implementation across five business divisions and automated reporting workflows, reducing manual reporting time by 70%.",
     icon: BriefcaseIcon,
-    tags: ["React", ".NET", "SQL Server"],
+    tags: ["ERP", "Automation", "Business Analysis"],
   },
   {
     categories: ["Experience"],
     title: "Data Science Intern",
     organization: "PT Algonacci Sobat Nusantara",
     period: "Jul 2024 - Oct 2024",
-    description: "Contributed to LLM-based chatbot development and end-to-end data pipelines.",
+    description: "Contributed to an LLM-based chatbot, managed end-to-end data pipelines, and applied classification and clustering techniques to structured and unstructured data.",
     icon: BriefcaseIcon,
     tags: ["LLM", "RAG", "Python"],
   },
@@ -55,9 +55,9 @@ const timelineData = [
     title: "Bachelor's Degree in Informatics",
     organization: "Politeknik Negeri Jakarta",
     period: "2021 - 2025",
-    description: "GPA: 3.73/4.00. Specialized in software development and machine learning.",
+    description: "Completed a Diploma 4 degree in Informatics Engineering with a GPA of 3.73/4.00.",
     icon: AcademicCapIcon,
-    tags: ["Computer Science", "Algorithms"],
+    tags: ["GPA 3.73", "Software Development", "Machine Learning"],
   },
 ];
 
@@ -153,7 +153,7 @@ const JourneySection = () => {
             My <span className="text-gradient">Journey</span>
           </h2>
           <p className="text-text-tertiary mt-4 max-w-lg mx-auto">
-            From coding lines in my dorm room to architecting enterprise solutions. Here is how I got here.
+            From campus projects to enterprise workflows, here is the path that shaped my work in data, backend, and AI.
           </p>
         </motion.div>
 

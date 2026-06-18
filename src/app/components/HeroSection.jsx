@@ -74,7 +74,7 @@ const HeroSection = () => {
             {/* Role/Tagline */}
             <motion.div custom={2} variants={textVariants} className="max-w-2xl">
               <p className="text-xl md:text-2xl text-text-secondary leading-relaxed">
-                I build <span className="text-accent-primary font-semibold">digital experiences</span> that merge creativity with data-driven engineering.
+                I build <span className="text-accent-primary font-semibold">practical systems</span> across data, backend, and AI to solve real business problems.
               </p>
             </motion.div>
 
@@ -84,6 +84,14 @@ const HeroSection = () => {
               variants={textVariants}
               className="hidden lg:block w-24 h-px bg-gradient-to-r from-accent-primary/50 to-transparent mt-8"
             ></motion.div>
+
+            <motion.p
+              custom={4}
+              variants={textVariants}
+              className="text-sm md:text-base text-text-tertiary max-w-xl"
+            >
+              Recent Informatics Engineering graduate with experience in data analysis, ERP automation, backend integration, and RAG chatbot delivery.
+            </motion.p>
           </motion.div>
         </motion.div>
 
@@ -120,7 +128,7 @@ const HeroSection = () => {
             >
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-text-primary">Open to Work</span>
+                <span className="text-sm font-medium text-text-primary">Open to Data, AI & Full-Stack Roles</span>
               </div>
             </motion.div>
           </motion.div>

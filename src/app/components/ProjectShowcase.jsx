@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const projectsData = [
   {
@@ -147,40 +146,6 @@ const ProjectShowcase = () => {
               />
             </div>
           ))}
-
-          {/* Canva Presentation Slide */}
-          <div className="relative min-w-[350px] md:min-w-[500px] h-[550px] flex-shrink-0 flex flex-col justify-center">
-            <div className="bg-dark-card border border-border-primary/50 rounded-xl overflow-hidden shadow-2xl p-6 h-full flex flex-col">
-                <div className="mb-4">
-                     <h3 className="text-2xl font-bold text-text-primary mb-2">
-                        <span className="text-gradient">Full Portfolio</span>
-                    </h3>
-                    <p className="text-text-secondary text-sm">
-                        View the complete presentation deck including extra case studies and analytics.
-                    </p>
-                </div>
-                
-                <div className="relative flex-grow w-full rounded-lg overflow-hidden border border-border-primary/30">
-                    <iframe
-                        loading="lazy"
-                        className="absolute inset-0 w-full h-full"
-                        src="https://www.canva.com/design/DAGiPyJtZxA/6ZbqaJsbauNKVctmgPuoEQ/view?embed"
-                        allowFullScreen
-                        allow="fullscreen"
-                    />
-                </div>
-
-                <a
-                    href="https://www.canva.com/design/DAGiPyJtZxA/6ZbqaJsbauNKVctmgPuoEQ/view"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 mt-4 px-4 py-2 bg-accent-primary/10 text-accent-primary hover:bg-accent-primary hover:text-white rounded-lg transition-all duration-300"
-                >
-                    <span className="font-medium">Open Presentation</span>
-                    <ArrowTopRightOnSquareIcon className="h-4 w-4" />
-                </a>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

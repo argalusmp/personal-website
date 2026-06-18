@@ -47,8 +47,7 @@ const CTASection = () => {
             <span className="text-gradient">impactful</span> together.
             </h2>
             <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Ready to turn your vision into reality? Whether it&apos;s a complex web application, 
-            an AI-powered solution, or a data-driven platform.
+            Ready to turn your vision into reality? I&apos;m open to Data Analytics, Business Analytics, Data Science, and Full-Stack opportunities.
             </p>
         </motion.div>
 
@@ -58,7 +57,7 @@ const CTASection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
         >
             <a 
-            href="mailto:vidiargalus@gmail.com"
+            href="mailto:septriargalus@gmail.com"
             className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-semibold rounded-full text-lg hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
             >
             <EnvelopeIcon className="w-6 h-6" />
@@ -66,7 +65,7 @@ const CTASection = () => {
             </a>
             
             <p className="mt-8 text-text-tertiary text-sm">
-            Or find me on <a href="https://linkedin.com/in/vidi-marpaung/" className="text-accent-primary hover:underline">LinkedIn</a> & <a href="https://github.com/argalusmp" className="text-accent-primary hover:underline">GitHub</a>
+            Or find me on <a href="https://www.linkedin.com/in/vidi-septri-argalus-mp/" className="text-accent-primary hover:underline">LinkedIn</a> & <a href="https://github.com/argalusmp" className="text-accent-primary hover:underline">GitHub</a>
             </p>
         </motion.div>
       </motion.div>

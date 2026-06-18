@@ -33,11 +33,14 @@ const skillsData = [
     ]
   },
   {
-    category: "Tools",
+    category: "Business & Automation",
     items: [
       { name: "Docker", level: 75, color: "text-blue-500", bg: "bg-blue-900/20", border: "border-blue-600/30" },
       { name: "Git", level: 90, color: "text-orange-600", bg: "bg-orange-900/20", border: "border-orange-700/30" },
       { name: "Looker Studio", level: 80, color: "text-blue-400", bg: "bg-blue-900/20", border: "border-blue-500/30" },
+      { name: "ERP Systems", level: 85, color: "text-emerald-400", bg: "bg-emerald-900/20", border: "border-emerald-500/30" },
+      { name: "Microsoft Excel", level: 92, color: "text-green-400", bg: "bg-green-900/20", border: "border-green-500/30" },
+      { name: "Process Automation", level: 88, color: "text-yellow-400", bg: "bg-yellow-900/20", border: "border-yellow-500/30" },
     ]
   }
 ];
@@ -84,7 +87,7 @@ const SkillVisualization = () => {
             Technical <span className="text-gradient">Arsenal</span>
           </h2>
           <p className="text-text-tertiary text-lg max-w-2xl mx-auto">
-            The tools and technologies I use to bring ideas to life.
+            The tools and workflows I use to deliver data, backend, AI, and automation solutions.
           </p>
         </motion.div>
 
@@ -118,15 +121,15 @@ const SkillVisualization = () => {
         >
           <div className="p-4">
             <div className="text-4xl font-bold text-accent-primary mb-2">15+</div>
-            <div className="text-text-tertiary">Technologies Mastered</div>
+              <div className="text-text-tertiary">Technologies in Active Use</div>
           </div>
           <div className="p-4">
             <div className="text-4xl font-bold text-accent-secondary mb-2">92%</div>
-            <div className="text-text-tertiary">RAG Chatbot Accuracy</div>
+              <div className="text-text-tertiary">RAG Chatbot Answerable Rate</div>
           </div>
           <div className="p-4">
             <div className="text-4xl font-bold text-accent-tertiary mb-2">70%</div>
-            <div className="text-text-tertiary">Efficiency Improvement</div>
+              <div className="text-text-tertiary">Manual Reporting Time Reduced</div>
           </div>
         </motion.div>
       </div>
