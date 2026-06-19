@@ -25,7 +25,7 @@ const CanvaSection = () => {
               Canva <span className="text-gradient">Smart Embed</span>
             </h2>
             <p className="text-text-tertiary mt-4 max-w-2xl mx-auto">
-              A compact visual deck with supporting highlights, placed here so it appears after projects and before the technical summary.
+              A compact visual deck portfolio.
             </p>
           </div>
 
