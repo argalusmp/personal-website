@@ -47,7 +47,7 @@ const CTASection = () => {
             <span className="text-gradient">impactful</span> together.
             </h2>
             <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Ready to turn your vision into reality? I&apos;m open to Data Analytics, Business Analytics, Data Science, and Full-Stack opportunities.
+            Interested in SAP, software, data, or applied AI? Let&apos;s connect and explore how we can solve meaningful problems together.
             </p>
         </motion.div>
 
@@ -58,7 +58,7 @@ const CTASection = () => {
         >
             <a 
             href="mailto:septriargalus@gmail.com"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-semibold rounded-full text-lg hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-accent-primary text-white font-semibold rounded-full text-lg hover:bg-accent-secondary hover:scale-105 transition-all duration-300 shadow-glow"
             >
             <EnvelopeIcon className="w-6 h-6" />
             <span>Start a Conversation</span>

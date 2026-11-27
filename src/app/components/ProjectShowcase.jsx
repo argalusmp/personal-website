@@ -1,6 +1,6 @@
 "use client";
-import React, { useRef } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 const projectsData = [
@@ -21,10 +21,11 @@ const projectsData = [
     description:
       "Personalized song suggestions using content-based filtering and listening history analysis.",
     image: "/images/projects/11.png",
-    gitUrl: "https://github.com/argalusmp/songs_recommendation_system?tab=readme-ov-file",
+    gitUrl:
+      "https://github.com/argalusmp/songs_recommendation_system?tab=readme-ov-file",
     previewUrl: "/",
     technologies: ["Python", "Scikit-learn", "ML"],
-    status: "Completed"
+    status: "Completed",
   },
   {
     id: 3,
@@ -35,7 +36,7 @@ const projectsData = [
     gitUrl: "https://github.com/Capstone-CH2-PS374/ML_Recommendation_system",
     previewUrl: "https://github.com/Capstone-CH2-PS374/ML_Recommendation_system",
     technologies: ["TensorFlow", "Python", "Recommender"],
-    status: "Completed"
+    status: "Completed",
   },
   {
     id: 4,
@@ -46,17 +47,18 @@ const projectsData = [
     gitUrl: "https://github.com/argalusmp/chat_app_flutter",
     previewUrl: "/",
     technologies: ["Flutter", "Firebase", "Real-time"],
-    status: "Completed"
+    status: "Completed",
   },
   {
     id: 5,
     title: "Restaurant Management Web App",
-    description: "Comprehensive restaurant profile and management system with responsive design.",
+    description:
+      "Comprehensive restaurant profile and management system with responsive design.",
     image: "/images/projects/44.png",
     gitUrl: "https://github.com/argalusmp/restaurant-react",
     previewUrl: "/",
     technologies: ["React", "JavaScript", "CSS3"],
-    status: "Completed"
+    status: "Completed",
   },
   {
     id: 6,
@@ -67,7 +69,7 @@ const projectsData = [
     gitUrl: "https://github.com/argalusmp/Todolist-Basic-Laravel",
     previewUrl: "/",
     technologies: ["Laravel", "PHP", "MySQL"],
-    status: "Completed"
+    status: "Completed",
   },
   {
     id: 7,
@@ -78,7 +80,7 @@ const projectsData = [
     gitUrl: "https://github.com/argalusmp/laptop_price_prediction_ML",
     previewUrl: "/",
     technologies: ["Python", "Scikit-learn", "Data Analysis"],
-    status: "Completed"
+    status: "Completed",
   },
   {
     id: 8,
@@ -89,7 +91,7 @@ const projectsData = [
     gitUrl: "https://github.com/argalusmp/gestura_app",
     previewUrl: "/",
     technologies: ["Computer Vision", "Python", "ML"],
-    status: "Completed"
+    status: "Completed",
   },
   {
     id: 9,
@@ -100,42 +102,46 @@ const projectsData = [
     gitUrl: "https://github.com/argalusmp/trashcker_IoT",
     previewUrl: "/",
     technologies: ["IoT", "Arduino", "PHP"],
-    status: "Completed"
-  }
+    status: "Completed",
+  },
 ];
 
 const ProjectShowcase = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  // Calculate width shift. 
-  // We have 9 projects + 1 Canva slide = 10 items.
-  // Assuming each card is roughly 400px + gap, or we use a percentage shift.
-  // 10 items * 450px card width = 4500px total width approx.
-  // We want to scroll horizontally effectively.
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-90%"]);
-
   return (
-    <section ref={targetRef} className="relative h-[500vh] bg-dark-secondary">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        
-        {/* Section Title Overlay (fades out as you scroll) */}
-        <motion.div 
-            style={{ opacity: useTransform(scrollYProgress, [0, 0.1], [1, 0]) }}
-            className="absolute top-10 left-10 md:top-20 md:left-20 z-10 pointer-events-none"
+    <section className="bg-dark-secondary py-24 md:py-32">
+      <div className="container-custom">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 flex flex-col gap-5 border-b border-border-primary pb-8 md:mb-16 md:flex-row md:items-end md:justify-between"
         >
-            <h2 className="text-4xl md:text-6xl font-bold">
-                Selected <span className="text-gradient">Works</span>
+          <div>
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-accent-secondary">
+              Selected work · 01—09
+            </span>
+            <h2 className="mt-4 text-4xl font-semibold md:text-6xl">
+              Ideas into <span className="text-accent-primary">practice.</span>
             </h2>
-            <p className="text-text-tertiary mt-2">Scroll down to explore gallery</p>
+          </div>
+          <p className="max-w-sm text-base leading-relaxed text-text-tertiary">
+            A selection of projects across machine learning, software, and
+            practical problem-solving.
+          </p>
         </motion.div>
 
-        <motion.div style={{ x }} className="flex gap-8 pl-10 md:pl-20">
-          {projectsData.map((project) => (
-            <div key={project.id} className="relative group min-w-[350px] md:min-w-[450px] h-[550px] flex-shrink-0">
-               <ProjectCard
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {projectsData.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
+              className="min-h-[400px]"
+            >
+              <ProjectCard
                 title={project.title}
                 description={project.description}
                 imgUrl={project.image}
@@ -144,9 +150,9 @@ const ProjectShowcase = () => {
                 technologies={project.technologies}
                 status={project.status}
               />
-            </div>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

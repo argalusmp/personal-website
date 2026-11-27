@@ -33,12 +33,11 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold text-text-primary">Vidi Septri Argalus MP</h3>
-                <p className="text-text-tertiary text-sm">IT Developer & Data Scientist</p>
+                <p className="text-text-tertiary text-sm">SAP ABAP · Software · Data</p>
               </div>
             </div>
             <p className="text-text-secondary max-w-md leading-relaxed">
-              Solution-oriented IT Developer and Data Scientist driving efficiency through automation 
-              and building intelligent RAG/LLM solutions. Let&apos;s create measurable business impact together.
+              SAP ABAP Consultant Trainee with a background in software, data, and AI. Focused on practical technology that creates measurable impact.
             </p>
           </motion.div>
 
@@ -94,7 +93,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/vidi-marpaung/"
+                  href="https://www.linkedin.com/in/vidi-septri-argalus-mp/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-tertiary hover:text-blue-400 transition-colors duration-300"
@@ -127,7 +126,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-text-tertiary text-sm flex items-center gap-1"
           >
-            © 2025 Vidi Septri Argalus MP. Made with <HeartIcon className="h-4 w-4 text-red-500" /> and passion.
+            © {new Date().getFullYear()} Vidi Septri Argalus MP. Made with <HeartIcon className="h-4 w-4 text-red-500" /> and passion.
           </motion.p>
           
           <motion.button

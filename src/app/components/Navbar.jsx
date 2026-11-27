@@ -94,7 +94,7 @@ const Navbar = () => {
               <h1 className="text-xl font-bold text-text-primary group-hover:text-gradient transition-all duration-300">
                 Vidi Argalus
               </h1>
-              <p className="text-xs text-text-tertiary">IT Developer & Data Scientist</p>
+              <p className="text-xs text-text-tertiary">SAP ABAP · Software · Data</p>
             </div>
           </Link>
 

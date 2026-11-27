@@ -1,6 +1,6 @@
 # 🚀 Vidi Septri Argalus MP - Personal Portfolio Website
 
-A modern, responsive portfolio website showcasing my professional experience as an IT Developer and Data Scientist, built with cutting-edge web technologies.
+A responsive portfolio website showcasing my experience in SAP ABAP consulting, software development, data, and AI.
 
 ## 🌐 Live Website
 
@@ -14,18 +14,16 @@ Solution-oriented IT Developer and Data Scientist with expertise in:
 - 🔹 RAG-based chatbot development (92% accuracy)
 - 🔹 Business process automation (70% efficiency improvement)
 
-Currently working at:
-- **PT Bank Rakyat Indonesia (Persero) Tbk.** - Business Support (IT & Risk Division)
-- **Purple Box AI** - Backend Developer (Freelance, Remote)
+Currently working as an **SAP ABAP Consultant Trainee at Crowe Indonesia**. Previous experience includes business support at **PT Bank Rakyat Indonesia (Persero) Tbk.**, backend development at **Purple Box AI**, and software development at **PT Berlian Sistem Informasi**.
 
 ## ✨ Features
 
 ### 🎨 Design & UX
-- **Modern Dark Theme** with gradient accents and smooth animations
+- **Editorial Light Theme** with warm paper tones, forest-green accents, and refined typography
 - **Fully Responsive** design optimized for all devices
 - **Interactive UI** with Framer Motion animations
 - **Smooth Scrolling** navigation with active section highlighting
-- **Glass Morphism** effects and dynamic background elements
+- **Responsive Project Grid** with clear project previews and links
 
 ### 📱 Sections
 - **Hero Section** - Dynamic typing animation showcasing multiple roles

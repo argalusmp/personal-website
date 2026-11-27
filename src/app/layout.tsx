@@ -4,14 +4,14 @@ import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vidi-argalus.vercel.app"),
-  title: "Vidi Septri Argalus MP | IT Developer, Data & AI",
-  description: "Results-driven IT professional and Informatics Engineering graduate with experience in data analysis, backend development, machine learning, ERP implementation, and AI chatbot delivery. Highlights include a 70% reduction in manual reporting time and a high-answerable-rate RAG chatbot.",
-  keywords: "Vidi Septri Argalus, Vidi Argalus, Data Scientist, Data Analyst, Business Analyst, IT Developer, Backend Developer, Machine Learning, LLM, RAG, Python, FastAPI, React, Next.js, NestJS, ERP, PostgreSQL, Portfolio",
+  title: "Vidi Septri Argalus MP | SAP ABAP, Software & Data",
+  description: "Vidi Septri Argalus MP is an SAP ABAP Consultant Trainee at Crowe Indonesia, with a background in software development, data analysis, automation, and applied AI.",
+  keywords: "Vidi Septri Argalus, Vidi Argalus, SAP ABAP Consultant, Crowe Indonesia, Data Scientist, Data Analyst, IT Developer, Backend Developer, Machine Learning, LLM, RAG, Python, FastAPI, React, Next.js, NestJS, ERP, PostgreSQL, Portfolio",
   authors: [{ name: "Vidi Septri Argalus MP" }],
   creator: "Vidi Septri Argalus MP",
   openGraph: {
-    title: "Vidi Septri Argalus MP | IT Developer, Data & AI",
-    description: "IT professional and Informatics Engineering graduate focused on data analysis, backend development, machine learning, ERP systems, and AI chatbot delivery.",
+    title: "Vidi Septri Argalus MP | SAP ABAP, Software & Data",
+    description: "SAP ABAP Consultant Trainee at Crowe Indonesia, with experience in software development, data, automation, and applied AI.",
     url: "https://vidi-argalus.vercel.app",
     siteName: "Vidi Argalus Portfolio",
     images: [
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vidi Septri Argalus MP | IT Developer, Data & AI",
-    description: "IT professional and Informatics Engineering graduate focused on data analysis, backend development, machine learning, ERP systems, and AI chatbot delivery.",
+    title: "Vidi Septri Argalus MP | SAP ABAP, Software & Data",
+    description: "SAP ABAP Consultant Trainee at Crowe Indonesia, with experience in software development, data, automation, and applied AI.",
     images: ["/images/main-profil.png"],
   },
   robots: {
@@ -56,7 +56,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="theme-color" content="#f5f2e9" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="font-sans antialiased">

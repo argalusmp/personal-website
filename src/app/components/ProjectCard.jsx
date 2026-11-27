@@ -8,8 +8,8 @@ import Image from "next/image";
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, technologies, status }) => {
   return (
     <motion.div
-      className="card-hover group overflow-hidden h-full flex flex-col"
-      whileHover={{ y: -8 }}
+      className="card-hover group overflow-hidden h-full flex flex-col p-0"
+      whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
     >
       {/* Image Container */}
@@ -22,7 +22,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, technolog
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-dark-primary/0 group-hover:bg-dark-primary/90 transition-all duration-500 flex items-center justify-center">
+        <div className="absolute inset-0 bg-accent-primary/0 group-hover:bg-accent-primary/90 transition-all duration-500 flex items-center justify-center">
           <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 flex gap-4">
             <Link
               href={gitUrl}
@@ -52,8 +52,8 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, technolog
         <div className="absolute top-3 right-3">
           <span className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${
             status === "Completed" 
-              ? "bg-green-500/20 text-green-400 border border-green-500/30" 
-              : "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+              ? "bg-accent-primary/10 text-accent-primary border border-accent-primary/30"
+              : "bg-accent-secondary/10 text-accent-secondary border border-accent-secondary/30"
           }`}>
             <CheckCircleIcon className="h-3 w-3" />
             {status}

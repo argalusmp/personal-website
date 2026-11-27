@@ -36,19 +36,27 @@ const TAB_DATA = [
     content: (
       <div className="space-y-4">
         <div className="card">
-          <h4 className="text-lg font-semibold text-text-primary mb-2">Business Support - IT & Risk</h4>
-          <p className="text-accent-primary font-medium mb-1">PT Bank Rakyat Indonesia (Persero) Tbk.</p>
-          <p className="text-text-tertiary text-sm mb-2">Nov 2025 - Present</p>
+          <h4 className="text-lg font-semibold text-text-primary mb-2">SAP ABAP Consultant Trainee</h4>
+          <p className="text-accent-primary font-medium mb-1">Crowe Indonesia</p>
+          <p className="text-text-tertiary text-sm mb-2">Current</p>
           <p className="text-text-secondary text-sm">
-            Leading data quality assurance and standardization for internal validation platform.
+            Developing skills in SAP ABAP and enterprise consulting.
           </p>
         </div>
         <div className="card">
-          <h4 className="text-lg font-semibold text-text-primary mb-2">Backend Developer (Freelance)</h4>
-          <p className="text-accent-primary font-medium mb-1">Purple Box AI</p>
-          <p className="text-text-tertiary text-sm mb-2">Oct 2025 - Present (Remote)</p>
+          <h4 className="text-lg font-semibold text-text-primary mb-2">Business Support Intern - IT & Risk</h4>
+          <p className="text-accent-primary font-medium mb-1">PT Bank Rakyat Indonesia (Persero) Tbk.</p>
+          <p className="text-text-tertiary text-sm mb-2">Nov 2025 - May 2026</p>
           <p className="text-text-secondary text-sm">
-            Implementing platform integrations (Shopify, WooCommerce APIs) using Python & NestJS.
+            Standardized customer data, automated Excel-based reporting, and built PDF document workflows for tax-office requests.
+          </p>
+        </div>
+        <div className="card">
+          <h4 className="text-lg font-semibold text-text-primary mb-2">Backend Developer</h4>
+          <p className="text-accent-primary font-medium mb-1">Purple Box AI</p>
+          <p className="text-text-tertiary text-sm mb-2">Oct 2025 - Jan 2026</p>
+          <p className="text-text-secondary text-sm">
+            Built platform integrations for Shopify and WooCommerce using Python and NestJS.
           </p>
         </div>
       </div>
@@ -161,11 +169,7 @@ const AboutSection = () => {
         >
           <div className="mb-8">
             <p className="text-text-secondary text-lg leading-relaxed mb-6">
-              I&apos;m a solution-oriented IT Developer and Data Scientist with a strong foundation in 
-              full-stack development and Machine Learning/LLM engineering. Currently contributing to 
-              data quality initiatives at PT Bank Rakyat Indonesia and developing backend solutions at 
-              Purple Box AI, I&apos;ve demonstrated measurable impact through a 70% reduction in manual 
-              reporting time and successful RAG/LLM chatbot prototype development achieving 92% accuracy.
+              I&apos;m an SAP ABAP Consultant Trainee at Crowe Indonesia with a background in software development and data science. My earlier experience includes ERP implementation, backend integrations, data quality, and automation—work that reduced manual reporting time by 70%.
             </p>
             <p className="text-text-secondary text-lg leading-relaxed">
               Proficient in Python (Pandas, scikit-learn, TensorFlow), JavaScript/TypeScript (React, Next.js, NestJS), 

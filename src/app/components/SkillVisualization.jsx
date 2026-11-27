@@ -52,15 +52,15 @@ const SkillCard = ({ item, index }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       whileHover={{ y: -5, scale: 1.05 }}
-      className={`relative px-4 py-3 rounded-xl border ${item.border} ${item.bg} backdrop-blur-sm flex items-center gap-3 cursor-default group`}
+      className="relative flex cursor-default items-center gap-3 border border-border-primary bg-dark-card px-4 py-3 transition-colors group hover:border-accent-primary"
     >
-      <div className={`w-2 h-2 rounded-full ${item.color.replace("text-", "bg-")} shadow-[0_0_10px_currentColor] group-hover:shadow-[0_0_15px_currentColor] transition-shadow duration-300`}></div>
-      <span className={`font-medium ${item.color.replace("text-", "group-hover:text-")} transition-colors`}>
+      <div className="h-2 w-2 rounded-full bg-accent-secondary transition-colors group-hover:bg-accent-primary"></div>
+      <span className="font-medium text-text-secondary transition-colors group-hover:text-accent-primary">
         {item.name}
       </span>
       
       {/* Percentage (Optional, shown on hover) */}
-      <div className="absolute top-0 right-0 -mt-2 -mr-2 opacity-0 group-hover:opacity-100 transition-opacity bg-dark-card border border-border-primary px-2 py-0.5 rounded text-xs text-text-muted">
+      <div className="absolute right-0 top-0 -mr-2 -mt-2 rounded border border-border-primary bg-dark-card px-2 py-0.5 text-xs text-text-muted opacity-0 transition-opacity group-hover:opacity-100">
         {item.level}%
       </div>
     </motion.div>

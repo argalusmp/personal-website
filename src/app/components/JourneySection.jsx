@@ -7,9 +7,18 @@ import Image from "next/image";
 const timelineData = [
   {
     categories: ["Experience"],
+    title: "SAP ABAP Consultant Trainee",
+    organization: "Crowe Indonesia",
+    period: "Current",
+    description: "Developing skills in SAP ABAP and enterprise consulting at Crowe Indonesia.",
+    icon: BriefcaseIcon,
+    tags: ["SAP ABAP", "ERP", "Consulting"],
+  },
+  {
+    categories: ["Experience"],
     title: "Business Support Internship - IT & Risk",
     organization: "PT Bank Rakyat Indonesia (Persero) Tbk.",
-    period: "Nov 2025 - Mei 2026",
+    period: "Nov 2025 - May 2026",
     description: "Standardized critical customer data fields, automated Excel-based reporting, and built PDF document management workflows for tax-office requests.",
     icon: BriefcaseIcon,
     tags: ["Data Quality", "Python", "Automation"],
@@ -153,7 +162,7 @@ const JourneySection = () => {
             My <span className="text-gradient">Journey</span>
           </h2>
           <p className="text-text-tertiary mt-4 max-w-lg mx-auto">
-            From campus projects to enterprise workflows, here is the path that shaped my work in data, backend, and AI.
+            From campus projects to enterprise technology, here is the path that shaped my work in software, data, and AI.
           </p>
         </motion.div>
 

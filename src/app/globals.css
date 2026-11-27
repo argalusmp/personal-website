@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 10, 10, 10;
-  --background-end-rgb: 26, 26, 26;
+  --paper: #f5f2e9;
+  --ink: #1c3025;
+  --forest: #285b43;
+  --clay: #c66d46;
+  --line: #d7d2c4;
 }
 
 * {
@@ -38,47 +39,42 @@ html.lenis body {
   pointer-events: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    135deg,
-    rgb(var(--background-start-rgb)) 0%,
-    rgb(var(--background-end-rgb)) 100%
-  );
-  min-height: 100vh;
-  font-family: "Inter", system-ui, sans-serif;
-  overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
-/* Noise texture removed for smoother feel */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: radial-gradient(#285b4310 0.7px, transparent 0.7px);
+  background-size: 7px 7px;
+  font-family: "DM Sans", system-ui, sans-serif;
+}
 
-/* Custom scrollbar */
+::selection {
+  color: #fffaf0;
+  background: var(--forest);
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--paper);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6366f1;
-  border-radius: 4px;
+  background: #9caa9c;
+  border: 2px solid var(--paper);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8b5cf6;
-}
-
-/* Selection styles */
-::selection {
-  background: #6366f1;
-  color: white;
-}
-
-::-moz-selection {
-  background: #6366f1;
-  color: white;
+  background: var(--forest);
 }
 
 @layer base {
@@ -89,7 +85,12 @@ body {
   h5,
   h6 {
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.12;
+  }
+
+  h1,
+  h2 {
+    font-family: "Playfair Display", Georgia, serif;
   }
 
   h1 {
@@ -107,19 +108,19 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-gradient-primary text-white font-medium rounded-xl hover:shadow-glow transition-all duration-300 transform hover:scale-105;
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent-primary text-white font-semibold transition-colors duration-300 hover:bg-accent-secondary;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-dark-card text-text-primary font-medium rounded-xl border border-border-primary hover:border-accent-primary hover:shadow-glow transition-all duration-300;
+    @apply inline-flex items-center gap-2 px-6 py-3 text-text-primary font-semibold border border-border-primary transition-colors duration-300 hover:border-accent-primary;
   }
 
   .card {
-    @apply bg-dark-card border border-border-primary rounded-2xl p-6 shadow-dark hover:shadow-dark-lg transition-all duration-300;
+    @apply bg-dark-card border border-border-primary p-6 shadow-dark transition-all duration-300;
   }
 
   .card-hover {
-    @apply card hover:border-accent-primary hover:shadow-glow transform hover:scale-105;
+    @apply card hover:border-accent-primary hover:shadow-dark-lg;
   }
 
   .section-padding {
@@ -127,7 +128,7 @@ body {
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-5 sm:px-8;
   }
 
   .text-gradient {
@@ -139,28 +140,21 @@ body {
   }
 
   .glass-effect {
-    @apply bg-dark-surface/50 backdrop-blur-sm border border-border-primary/50;
-  }
-
-  .glow-border {
-    @apply relative;
-  }
-
-  .glow-border::before {
-    content: "";
-    @apply absolute inset-0 rounded-2xl bg-gradient-primary opacity-0 transition-opacity duration-300;
-    z-index: -1;
-    padding: 1px;
-  }
-
-  .glow-border:hover::before {
-    @apply opacity-100;
+    @apply bg-dark-card/95 backdrop-blur-md border-b border-border-primary;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .font-editorial {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-mono {
+    font-family: "DM Mono", monospace;
   }
 
   .perspective-1000 {
@@ -182,14 +176,26 @@ body {
   @keyframes float {
     0%,
     100% {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
+
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-12px);
     }
   }
 
   .animate-pulse-slow {
     animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
